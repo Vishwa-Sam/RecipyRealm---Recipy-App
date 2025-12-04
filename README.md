@@ -1,27 +1,83 @@
-# Http
+<img src="./src/assets/logo.png" alt="Recipy Logo" width="90" height="90" style="border-radius:10px;">
+RecipyReal – Modern Recipe Management Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0.
+Recipy is a dynamic and fully featured recipe management web application built using modern Angular architecture, Firebase integration, and clean UI principles powered by Bootstrap. The application allows users to easily explore recipes, manage ingredients, create personalized collections, and maintain a real-time synchronized shopping list.
 
-## Development server
+Designed as a scalable and production-ready Angular project, Recipy showcases modular structure, reusable components, route-based navigation, service-based APIs, and integration with Firebase Authentication and Realtime Database.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+✨ Features
+🧭 Multi-Page User Experience
 
-## Code scaffolding
+Landing Page – A welcoming, clean introduction to the platform
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Recipes Page – Browse and filter all available recipes
 
-## Build
+Recipe Detail View – View full details including ingredients, instructions, and ingredient-to-shopping-list actions
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Add Recipe Page – Create new recipes with images, ingredients, and steps
 
-## Running unit tests
+Edit Recipe Page – Update existing recipes with real-time Firebase sync
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Shopping List Page – Add, remove, and manage ingredients easily
 
-## Running end-to-end tests
+Additional UI Pages – Includes extra UI screens demonstrating Angular routing, shared components, and reusable layouts
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+🔐 Authentication & Data Persistence
 
-## Further help
+User Authentication with Firebase Email/Password login
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Secure Data Storage with Firebase Realtime Database
+
+REST API Integration for storing and retrieving recipes
+
+Protected Routes ensuring only authenticated users access recipe management features
+
+🧩 Modern Angular Development
+
+Standalone components (or latest Angular module patterns)
+
+Reactive forms for recipe creation & editing
+
+RxJS-based services for reactive state and API communication
+
+Clean architecture with separation of concerns
+
+Reusable components, directives, and services
+
+🛠 Technology Stack
+
+Angular (Latest Version)
+
+TypeScript
+
+HTML5, CSS3, Bootstrap
+
+Firebase Authentication & Realtime Database
+
+REST API Integration
+
+RxJS
+
+
+
+🚀 Usage Overview
+
+Create an Account or Log In
+Firebase Authentication ensures secure access.
+
+Browse Recipes
+The Recipes page displays all available recipes pulled from Firebase.
+
+View Recipe Details
+Each recipe includes ingredients, instructions, and actions like editing or adding items to the shopping list.
+
+Add or Edit Recipes
+Use the built-in form (built with Angular reactive forms) to manage your recipe collection.
+
+Manage Your Shopping List
+Add ingredients from recipes or manually create your own entries.
+
+🤝 Contributing
+
+Contributions are welcome!
+If you’d like to improve the project, feel free to fork the repository, submit issues, or open pull requests.
