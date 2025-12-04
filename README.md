@@ -1,5 +1,5 @@
 <h1>
-  <img src="YOUR_LOGO_PATH_HERE" alt="Recipy Logo" width="60" style="vertical-align: middle; margin-right: 10px;">
+  <img src="/src/assets/logo.png" alt="Recipy Logo" width="60" style="vertical-align: middle; margin-right: 10px;">
   RecipyRealm – Recipe Management Application
 </h1>
 
@@ -52,7 +52,9 @@ Clean architecture with separation of concerns
 
 Reusable components, directives, and services
 
-🛠 Technology Stack
+---
+
+## 🛠 Technology Stack
 
 Angular (Latest Version)
 
