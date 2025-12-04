@@ -1,11 +1,15 @@
-<img src="./src/assets/logo.png" alt="Recipy Logo" width="90" height="90" style="border-radius:10px;">
-RecipyReal – Modern Recipe Management Application
+<h1>
+  <img src="YOUR_LOGO_PATH_HERE" alt="Recipy Logo" width="60" style="vertical-align: middle; margin-right: 10px;">
+  RecipyRealm – Recipe Management Application
+</h1>
 
 Recipy is a dynamic and fully featured recipe management web application built using modern Angular architecture, Firebase integration, and clean UI principles powered by Bootstrap. The application allows users to easily explore recipes, manage ingredients, create personalized collections, and maintain a real-time synchronized shopping list.
 
 Designed as a scalable and production-ready Angular project, Recipy showcases modular structure, reusable components, route-based navigation, service-based APIs, and integration with Firebase Authentication and Realtime Database.
 
-✨ Features
+---
+
+## ✨ Features
 🧭 Multi-Page User Experience
 
 Landing Page – A welcoming, clean introduction to the platform
@@ -22,7 +26,9 @@ Shopping List Page – Add, remove, and manage ingredients easily
 
 Additional UI Pages – Includes extra UI screens demonstrating Angular routing, shared components, and reusable layouts
 
-🔐 Authentication & Data Persistence
+---
+
+## 🔐 Authentication & Data Persistence
 
 User Authentication with Firebase Email/Password login
 
@@ -32,7 +38,9 @@ REST API Integration for storing and retrieving recipes
 
 Protected Routes ensuring only authenticated users access recipe management features
 
-🧩 Modern Angular Development
+---
+
+## 🧩 Modern Angular Development
 
 Standalone components (or latest Angular module patterns)
 
@@ -58,9 +66,9 @@ REST API Integration
 
 RxJS
 
+---
 
-
-🚀 Usage Overview
+## 🚀 Usage Overview
 
 Create an Account or Log In
 Firebase Authentication ensures secure access.
@@ -76,8 +84,10 @@ Use the built-in form (built with Angular reactive forms) to manage your recipe 
 
 Manage Your Shopping List
 Add ingredients from recipes or manually create your own entries.
+ 
+ --- 
 
-🤝 Contributing
+## 🤝 Contributing
 
 Contributions are welcome!
 If you’d like to improve the project, feel free to fork the repository, submit issues, or open pull requests.
