@@ -1,0 +1,502 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #ff7f50;
+  --accent-color: #ff9a76;
+  --text-color: #333;
+  --bg-light: #fffaf5;
+}
+
+body {
+  margin: 0;
+  color: var(--text-color);
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  background: rgb(216, 207, 170);
+  padding: 80px 20px;
+  width: 100%;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text,
+.hero-image,
+.section-content,
+.section-image {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  line-height: 2.2rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.hero-text .button {
+  margin-right: 10px;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 650px;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.button {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 12px 28px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.primary-btn {
+  background: linear-gradient(to right, #ff0303, #ff7300);
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 140, 66, 0.3);
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+.secondary-btn:hover {
+  background-color: #000000;
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+/* ===== GENERIC CONTAINER ===== */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 3rem;
+}
+
+/* ===== OUR STORY ===== */
+.our-story h2 {
+  font-weight: bold;
+  margin-top: 30px;
+  color: #ff7f50;
+}
+.our-story p {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
+/* ========== SHARED SECTION STYLES (Discover, Features, etc.) ========== */
+.section {
+  background: #fff;
+  padding: 80px 20px;
+  margin-top: 5vh;
+}
+
+.section.alt-bg {
+  background: var(--bg-light);
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.section-content h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 5rem;
+  margin-bottom: 16px;
+  color: #ff7f50;
+}
+
+.section-content p {
+  margin-bottom: 18px;
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  color: #777474;
+}
+
+/* ===== ICON LISTS WITH SVG BUBBLES ===== */
+.section-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+
+.section-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+
+.icon-bubble {
+  background: #ffb562; /* warm orange tone */
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 3px 8px rgba(255, 170, 90, 0.3);
+  transition: all 0.3s ease;
+}
+
+.icon-bubble img {
+  width: 26px;
+  height: 26px;
+  filter: brightness(0);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effects for icon bubbles */
+.section-list li:hover .icon-bubble {
+  background: linear-gradient(to right, #ff8a05, #ffb347);
+  transform: translateY(-3px);
+}
+
+.section-list li:hover .icon-bubble img {
+  transform: scale(1.1);
+}
+
+.section-list li strong {
+  color: var(--primary-color);
+}
+
+/* ========== IMAGES ========== */
+.section-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  height: 55vh;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== BOTTOM HEADER SECTION ========== */
+.bottom-header {
+  text-align: center;
+  background: var(--bg-light);
+  padding: 60px 20px;
+}
+
+a {
+  color: #ff0303 !important;
+}
+
+/* ========== CALL TO ACTION SECTION ========== */
+.call-to-action {
+  background: linear-gradient(to right, #fff4c6, #ffe8d2);
+  color: rgb(12, 12, 12);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.app-links img {
+  width: 150px;
+  height: auto;
+  margin: 10px;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.app-links img:hover {
+  transform: scale(1.05);
+}
+
+.cta-note {
+  margin-top: 15px;
+}
+
+/* ========== SHARED STYLES ========== */
+.call-to-action h2,
+.bottom-header h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 18px;
+  color: #ff7f50;
+}
+
+.bottom-header p,
+.call-to-action p {
+  font-size: 2.2rem;
+  line-height: 3rem;
+  max-width: 900px;
+  margin: 0 auto 24px;
+  color: #6e6e6e;
+}
+
+/* ========== LINK BUTTONS ========== */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 3rem;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: var(--primary-color);
+  color: rgb(255, 255, 255);
+}
+
+.btn.secondary {
+  background: rgb(0, 0, 0);
+  color: white;
+  border: 2px solid var(--primary-color);
+}
+
+.btn.primary:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+.btn.secondary:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+/* ===(max-width: 1200px) === */
+@media (max-width: 1200px) {
+  .hero-inner,
+  .section-container {
+    gap: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.6rem;
+  }
+
+  .section-content h2 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  .section-image img {
+    height: 45vh;
+  }
+
+  .call-to-action p {
+    line-height: 2.5rem;
+  }
+}
+
+/* === (max-width: 992px)===*/
+@media (max-width: 992px) {
+  .hero-inner,
+  .section-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-text p {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+
+  .button-group {
+    justify-content: center;
+  }
+
+  .section-content h2 {
+    font-size: 2.6rem;
+    line-height: 3.6rem;
+  }
+
+  .section-content p {
+    font-size: 1.6rem;
+  }
+
+  .section-list li {
+    justify-content: start;
+    text-align: left;
+    max-width: 85%;
+    margin: 0 auto 1.2rem;
+  }
+
+  .section-image img {
+    max-width: 85%;
+    height: auto;
+  }
+
+  .our-story p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    padding: 0 10px;
+  }
+}
+
+/* === (max-width: 768px)=== */
+@media (max-width: 768px) {
+  /* Buttons become full width */
+  .button-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .section-content h2 {
+    font-size: 2.2rem;
+    line-height: 3rem;
+  }
+
+  .section-content p,
+  .section-list li {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+
+  .icon-bubble {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon-bubble img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .section-list li {
+    gap: 14px;
+  }
+
+  .section-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .call-to-action h2,
+  .bottom-header h2 {
+    font-size: 2.4rem;
+  }
+
+  .call-to-action p,
+  .bottom-header p {
+    font-size: 1.5rem;
+  }
+}
+
+/* ===(max-width: 430px) === */
+@media (max-width: 430px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  .section-content h2 {
+    font-size: 1.9rem;
+    line-height: 2.5rem;
+  }
+
+  .section-content p {
+    font-size: 1.2rem;
+  }
+
+  .section-list li {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    gap: 10px;
+  }
+
+  .icon-bubble {
+    width: 34px;
+    height: 34px;
+  }
+
+  .icon-bubble img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .btn {
+    font-size: 1.4rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .app-links img {
+    width: 120px;
+  }
+}
+
+/* ===(max-width: 350px) === */
+@media (max-width: 350px) {
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .button {
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+
+  .section-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .section-list li {
+    font-size: 1rem;
+  }
+}

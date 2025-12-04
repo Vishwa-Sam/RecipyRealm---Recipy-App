@@ -1,0 +1,530 @@
+<section class="hero"
+         @contentFadeInOut>
+    <div class="hero-text">
+        <span class="tag">Meal planning made delightful</span>
+        <h1>Plan your week, discover new flavors,<br>and keep every recipe in one place</h1>
+        <p>Powerful search, clean organization, and a shopping list that stays in sync with your cooking.</p>
+        <div class="hero-buttons">
+            <button class="btn one"
+                    (click)="onNavigate()">Explore Recipes</button>
+            <button class="btn two"
+                    (click)="onNavTo()">Start Planning Now</button>
+        </div>
+        <div class="hero-tags">
+            <span>1,200+ community recipes</span>
+            <span>Smart shopping lists</span>
+            <span>Photo-forward design</span>
+        </div>
+    </div>
+    <div class="hero-img">
+        <img src="../../assets/Landing-page/landingpage-hero.jpg"
+             alt="Food">
+    </div>
+</section>
+
+<section class="why-choose">
+    <div class="why-content">
+        <div class="why-text">
+            <h2>Why Choose RecipyRealm?</h2>
+            <ul class="why-list">
+                <li>
+                    <img src="../../assets/Landing-page/icons/clock.svg"
+                         alt="clock"
+                         class="icon-bubble">
+                    <div>
+                        <strong>Save time</strong> with auto-organized recipes — everything is sorted by category,
+                        ingredients, and
+                        difficulty so you never waste time searching.
+                    </div>
+                </li>
+                <li>
+                    <img src="../../assets/Landing-page/icons/clipboard-check.svg"
+                         alt="clipboard-check"
+                         class="icon-bubble">
+                    <div>
+                        <strong>Smart</strong> shopping lists that update instantly — add ingredients with one tap and
+                        watch your list adjust
+                        as you choose new recipes.
+                    </div>
+                </li>
+                <li>
+                    <img src="../../assets/Landing-page/icons/search-check.svg"
+                         alt="search-check"
+                         class="icon-bubble">
+                    <div>
+                        <strong>Discover</strong> recipes tailored to your taste — personalized suggestions based on
+                        your cooking style,
+                        preferences, and saved dishes.
+                    </div>
+                </li>
+                <li>
+                    <img src="../../assets/Landing-page/icons/sparkles.svg"
+                         alt="sparkles"
+                         class="icon-bubble">
+                    <div>
+                        <strong>Clean design</strong> that keeps cooking fun — a distraction-free interface that helps
+                        you stay focused and
+                        enjoy the cooking process.
+                    </div>
+                </li>
+                <li>
+                    <img src="../../assets/Landing-page/icons/calendar-heart.svg"
+                         alt="plan"
+                         class="icon-bubble">
+                    <div>
+                        <strong>Plan meals</strong> effortlessly with weekly suggestions — get curated meal ideas that
+                        fit your schedule, tastes, and ingredient availability.
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="why-img"
+             inView
+             (inView)="imgState[0] = 'visible'"
+             [@imageAnimation]="imgState[0] || 'hidden'">
+            <img src="../../assets/Landing-page/why-choose.jpg"
+                 alt="Why Choose Us Image">
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="feature-card"
+         inView
+         (inView)="cardState[0] = 'visible'"
+         [@cardAnimation]="cardState[0] || 'hidden'">
+        <img src="../../assets/Landing-page/search.jpg"
+             alt="search">
+        <h4>Precision Search</h4>
+        <p>Find by cuisine, diet, time, or ingredients on hand. You can filter by your specific preferences to quickly
+            narrow down the search results. Whether you're looking for vegan recipes, gluten-free options, or just a
+            quick 15-minute meal, our search function helps you discover exactly what you need in seconds.</p>
+    </div>
+
+    <div class="feature-card"
+         inView
+         (inView)="cardState[1] = 'visible'"
+         [@cardAnimation]="cardState[1] || 'hidden'">
+        <img src="../../assets/Landing-page/ingredinets.jpg"
+             alt="shopping">
+        <h4>One Tap Shopping</h4>
+        <p>Turn any recipe into a clean, grouped grocery list. With one simple tap, all the ingredients from your chosen
+            recipes are added to your shopping list,making your shopping experience as seamless as possible. No more
+            scrambling through messy lists!</p>
+    </div>
+
+    <div class="feature-card"
+         inView
+         (inView)="cardState[2] = 'visible'"
+         [@cardAnimation]="cardState[2] || 'hidden'">
+        <img src="../../assets/Landing-page/world-food.jpg"
+             alt="worldwide-recipes">
+        <h4>Worldwide Recipes</h4>
+        <p>Explore recipes from all around the world. Whether you're craving Italian pasta, Japanese sushi, or Indian
+            curry, you can easily find recipes from every corner of the globe.</p>
+    </div>
+
+    <div class="feature-card"
+         inView
+         (inView)="cardState[3] = 'visible'"
+         [@cardAnimation]="cardState[3] || 'hidden'">
+        <img src="../../assets/Landing-page/organized.jpg"
+             alt="organization">
+        <h4>Beautiful Organization</h4>
+        <p>Tags, collections, and visual covers for quick scanning. Our platform helps you keep your recipes organized
+            with custom tags and collections, making it easier to find exactly what you're looking for.</p>
+    </div>
+</section>
+
+<section class="create-customize">
+    <div class="customize-wrapper">
+        <img src="../../assets/Landing-page/features.jpg"
+             alt="features"
+             class="features-img"
+             inView
+             (inView)="imgState[1] = 'visible'"
+             [@imageAnimation]="imgState[1] || 'hidden'">
+        <div class="customize-text">
+            <h2>Create & Customize Recipes</h2>
+            <p class="customize-subtitle">
+                Build your own recipes from scratch or customize existing ones with Samsung Food.
+            </p>
+
+            <ul class="customize-list">
+                <li>
+                    <img src="../../assets/Landing-page/icons/file-pen-line.svg"
+                         alt="edit recipe icon"
+                         class="icon-bubble">
+                    <div>
+                        <strong>Edit recipe.</strong> Make changes to steps, instructions, and structure easily.
+                    </div>
+                </li>
+                <li>
+                    <img src="../../assets/Landing-page/icons/circle-plus.svg"
+                         alt="add ingredients icon"
+                         class="icon-bubble">
+                    <div>
+                        <strong>Add ingredients.</strong> Add missing items or expand your ingredient list anytime.
+                    </div>
+                </li>
+                <li>
+                    <img src="../../assets/Landing-page/icons/pencil-line.svg"
+                         alt="edit ingredients icon"
+                         class="icon-bubble">
+                    <div>
+                        <strong>Edit ingredients.</strong> Substitute items, adjust quantities, or remove what you don’t
+                        need.
+                    </div>
+                </li>
+                <li>
+                    <img src="../../assets/Landing-page/icons/file-plus-corner.svg"
+                         alt="add new recipe icon"
+                         class="icon-bubble">
+                    <div>
+                        <strong>Add new recipe.</strong> Build and upload your own recipes from scratch.
+                    </div>
+                </li>
+                <li>
+                    <img src="../../assets/Landing-page/icons/save.svg"
+                         alt="add new recipe icon"
+                         class="icon-bubble">
+                    <div>
+                        <strong>Save recipe.</strong> Edited/Added recipe can be saved for others to enjoy you cooking
+                    </div>
+                </li>
+            </ul>
+            <a routerLink="/auth"
+               class="goto-link">
+                <span><strong>Create new recipe &#10140;</strong></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="collections">
+    <h2>Curated Collections</h2>
+    <p class="collection-desc">
+        Carefully handpicked recipe groups that save you time and inspire you to try something new.
+        From healthy bowls to indulgent desserts, these collections help you discover faster.
+    </p>
+
+    <div class="collection-grid">
+        <div class="collection-card"
+             inView
+             (inView)="cardState[4] = 'visible'"
+             [@cardAnimation]="cardState[4] || 'hidden'">
+            <img src="../../assets/Landing-page/healthy-eating.jpg"
+                 alt="healthy-eating">
+            <h4>Healthy Choices</h4>
+            <p class="collection-description">Explore nutrient-packed recipes that promote wellness without compromising
+                on flavor. Perfect for those seeking balanced, wholesome meals.</p>
+        </div>
+
+        <div class="collection-card"
+             inView
+             (inView)="cardState[5] = 'visible'"
+             [@cardAnimation]="cardState[5] || 'hidden'">
+            <img src="../../assets/Landing-page/sweet-tooth.jpg"
+                 alt="desserts">
+            <h4>Sweet Tooth</h4>
+            <p class="collection-description">Indulge in delectable desserts that satisfy your cravings. From rich cakes
+                to creamy pies, this collection is perfect for any sweet tooth.</p>
+        </div>
+
+        <div class="collection-card"
+             inView
+             (inView)="cardState[6] = 'visible'"
+             [@cardAnimation]="cardState[6] || 'hidden'">
+            <img src="../../assets/Landing-page/asian-food.jpg"
+                 alt="asian-food">
+            <h4>Asian Favorites</h4>
+            <p class="collection-description">Dive into the vibrant world of Asian cuisine with recipes ranging from
+                spicy stir-fries to savory noodles. Perfect for those craving authentic, bold flavors.</p>
+        </div>
+
+        <div class="collection-card"
+             inView
+             (inView)="cardState[7] = 'visible'"
+             [@cardAnimation]="cardState[7] || 'hidden'">
+            <img src="../../assets/Landing-page/grilled-food.jpg"
+                 alt="grill-recipes">
+            <h4>Grilled Perfection</h4>
+            <p class="collection-description">Fire up the grill with these tasty recipes. From perfectly grilled meats
+                to vegetable skewers, this collection has everything you need for your next BBQ.</p>
+        </div>
+
+        <div class="collection-card"
+             inView
+             (inView)="cardState[8] = 'visible'"
+             [@cardAnimation]="cardState[8] || 'hidden'">
+            <img src="../../assets/Landing-page/italian-food.jpg"
+                 alt="italian-recipes">
+            <h4>Italian Classics</h4>
+            <p class="collection-description">Savor the rich flavors of Italy with these classic recipes. From pasta to
+                pizza, enjoy the tastes of traditional Italian cooking right at home.</p>
+        </div>
+
+        <div class="collection-card"
+             inView
+             (inView)="cardState[9] = 'visible'"
+             [@cardAnimation]="cardState[9] || 'hidden'">
+            <img src="../../assets/Landing-page/easy-recipe.jpg"
+                 alt="quick-meals">
+            <h4>Quick & Easy Meals</h4>
+            <p class="collection-description">No time to cook? Try these quick and easy recipes that can be prepared in
+                30 minutes or less. Perfect for busy weeknights or last-minute cravings.</p>
+        </div>
+
+        <div class="collection-card"
+             inView
+             (inView)="cardState[10] = 'visible'"
+             [@cardAnimation]="cardState[10] || 'hidden'">
+            <img src="../../assets/Landing-page/comfort-food.jpg"
+                 alt="comfort-food">
+            <h4>Comfort Food</h4>
+            <p class="collection-description">Warm up with these comforting dishes that are sure to satisfy. From creamy
+                mac and cheese to hearty stews, this collection is perfect for cozy nights in.</p>
+        </div>
+
+        <div class="collection-card"
+             inView
+             (inView)="cardState[11] = 'visible'"
+             [@cardAnimation]="cardState[11] || 'hidden'">
+            <img src="../../assets/Landing-page/low-carb.jpg"
+                 alt="low-carb-recipes">
+            <h4>Low Carb Options</h4>
+            <p class="collection-description">Cut carbs without cutting flavor. This collection features tasty, low-carb
+                recipes that are perfect for those looking to eat healthier without sacrificing taste.</p>
+        </div>
+    </div>
+</section>
+
+<section class="built-for">
+    <div class="built-text">
+        <h2>Built for the way you cook</h2>
+        <div class="tags">
+            <span>Quick weeknights</span>
+            <span>Meal prep</span>
+            <span>Vegetarian</span>
+            <span>Family-style</span>
+            <span>Budget-friendly</span>
+        </div>
+        <ul>
+            <li>
+                <img src="../../assets/Landing-page/icons/sliders-horizontal.svg"
+                     alt="sliders-horizontal"
+                     class="icon-bubble">
+                <div><strong>Filter by total time and servings</strong> - Quickly refine recipes to match your schedule
+                    and the number of people you're cooking for.</div>
+            </li>
+            <li>
+                <img src="../../assets/Landing-page/icons/tags.svg"
+                     alt="tags"
+                     class="icon-bubble">
+                <div><strong>Organize by tags and collections</strong> - Build your own categories—like “Go-to Meals”,
+                    “Healthy Favorites”, or “Weekend Projects.”</div>
+            </li>
+            <li>
+                <img src="../../assets/Landing-page/icons/share-2.svg"
+                     alt="share"
+                     class="icon-bubble">
+                <div><strong>Share a shopping list with a partner</strong> - Keep everyone in sync with real-time
+                    updates, whether you're at home or at the store.</div>
+            </li>
+            <li>
+                <img src="../../assets/Landing-page/icons/refrigerator.svg"
+                     alt="refrigerator"
+                     class="icon-bubble">
+                <div><strong>Track ingredients you already have at home</strong> - Avoid buying duplicates by marking
+                    items you already own.</div>
+            </li>
+            <li>
+                <img src="../../assets/Landing-page/icons/sticky-note.svg"
+                     alt="notes"
+                     class="icon-bubble">
+                <div><strong>Save cooking tips and personal notes inside recipes</strong> - Keep all your culinary
+                    wisdom in one place for easy reference next time you cook.</div>
+            </li>
+        </ul>
+    </div>
+    <div class="built-img"
+         inView
+         (inView)="imgState[2] = 'visible'"
+         [@imageAnimation]="imgState[2] || 'hidden'">
+        <img src="../../assets/Landing-page/cook-way.jpg"
+             alt="Ingredients">
+    </div>
+</section>
+
+<section class="testimonials">
+    <div class="testimonial-heading">
+        <h2>Trusted by home chefs everywhere</h2>
+        <p>
+            Designed to elevate how you cook every day. With tools that help you plan smarter, stay organized,
+            and discover recipes that fit your real life, RecipeReal makes home cooking simpler, calmer, and more
+            enjoyable.
+        </p>
+    </div>
+
+    <div class="testimonial-cards">
+        <div class="testimonial">
+            <div class="stars">⭐⭐⭐⭐⭐</div> <!-- STAR RATING -->
+            <img class="testimonial-img"
+                 src="../../assets/Landing-page/testimonial1.png"
+                 alt="person">
+            <div>
+                <h4>Alex Carter</h4>
+                <p>
+                    I can plan dinners for the week in minutes.
+                    The list is a lifesaver at the store.
+                    It keeps everything organized and reduces stress when cooking and Planning meals used to take
+                    forever,
+                    but now it feels effortless.
+                </p>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <div class="stars">⭐⭐⭐⭐⭐</div> <!-- STAR RATING -->
+            <img class="testimonial-img"
+                 src="../../assets/Landing-page/testimonial2.png"
+                 alt="person">
+            <div>
+                <h4>Mina Patel</h4>
+                <p>
+                    The interface stays out of my way — clean, fast, and easy to navigate.
+                    I love how the recipes are displayed visually.
+                    It makes choosing what to cook genuinely fun.
+                </p>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <div class="stars">⭐⭐⭐⭐⭐</div> <!-- STAR RATING -->
+            <img class="testimonial-img"
+                 src="../../assets/Landing-page/testimonial3.png"
+                 alt="person">
+            <div>
+                <h4>Alice Bennett</h4>
+                <p>
+                    This app has honestly changed how I cook.I'm cooking more often and wasting less food.
+                    The quick filters help me decide instantly what to make.
+                    It has become my go-to cooking assistant.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="popular">
+    <h2>Popular this week</h2>
+    <p>Discover what everyone’s cooking right now—simple, flavorful favorites picked by our community.
+    </p>
+    <div class="recipes-grid">
+        <div class="recipe-card"
+             inView
+             (inView)="cardState[13] = 'visible'"
+             [@cardAnimation]="cardState[13] || 'hidden'">
+            <img src="../../assets/Landing-page/pan-chicken.jpg"
+                 alt="pan-chicken">
+            <h4>Sheet-Pan Chicken</h4>
+            <p>
+                Hands-off, crispy edges, and perfectly seasoned.
+                A reliable weeknight superstar that takes very little prep.
+                Effortless cleanup and family-approved flavor in every bite.
+
+            </p>
+        </div>
+
+        <div class="recipe-card"
+             inView
+             (inView)="cardState[14] = 'visible'"
+             [@cardAnimation]="cardState[14] || 'hidden'">
+            <img src="../../assets/Landing-page/pasta.jpg"
+                 alt="creamy-pasta">
+            <h4>Creamy Mushroom Pasta</h4>
+            <p>
+                Silky, rich, and packed with umami flavor.
+                A cozy pasta that never disappoints.
+                Perfect for nights when you want comfort that still feels elevated.
+
+            </p>
+        </div>
+
+        <div class="recipe-card"
+             inView
+             (inView)="cardState[15] = 'visible'"
+             [@cardAnimation]="cardState[15] || 'hidden'">
+            <img src="../../assets/Landing-page/lentil soup.jpg"
+                 alt="lentil-soup">
+            <h4>Hearty Lentil Soup</h4>
+            <p>
+                Warm, nourishing, and packed with nutrients.
+                A comfort bowl that fits any season.
+                Hearty enough for dinner yet light enough to enjoy anytime.
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+
+        <div class="footer-section brand">
+            <h3 class="footer-logo">RecipeRealm <span><img src="../../assets/logo.png"
+                         alt="logo"
+                         class="logo"></span></h3>
+            <p>© 2025 RecipyRealm. All rights reserved.</p>
+        </div>
+
+        <div class="footer-section links">
+            <h4>Quick Links</h4>
+            <ul class="home-links">
+                <li><a routerLink="/auth">Login/Sign-up</a></li>
+                <li><a routerLink="/about-us">About Section</a></li>
+                <li><a routerLink="/blog">Blog Section</a></li>
+                <li><a routerLink="/community">Community Section</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section contact">
+            <h4>Contact</h4>
+            <ul class="contact">
+                <li><a href="#"><img src="../../assets/Landing-page/icons/mail.svg"
+                             alt="email icon"
+                             class="icon-bubble">
+                        Email</a>
+
+                </li>
+                <li><a href="#"><img src="../../assets/Landing-page/icons/discord.svg"
+                             alt="discord icon"
+                             class="icon-bubble">
+                        Discord</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-section socials">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <ul>
+                    <li>
+                        <a href="#"><img src="../../assets/Landing-page/icons/instagram.svg"
+                                 alt="Instagram icon"
+                                 class="icon-bubble"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../../assets/Landing-page/icons/twitter.svg"
+                                 alt="Twitter icon"
+                                 class="icon-bubble"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../../assets/Landing-page/icons/facebook.svg"
+                                 alt="Facebook icon"
+                                 class="icon-bubble"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

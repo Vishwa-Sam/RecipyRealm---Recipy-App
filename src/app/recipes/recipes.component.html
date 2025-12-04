@@ -1,0 +1,101 @@
+<div class="filter-section">
+  <h4>Refine Your Recipe Search:</h4>
+  <div class="filter-buttons">
+
+    <button (click)="onShowAllRecipes(); setActiveFilter('All')"
+            [class.active]="activeFilter === 'All'">
+      🍽️ Show All Recipes
+    </button>
+    <button (click)="onCategoryFilter('Non-Vegetarian'); setActiveFilter('Non-Vegetarian')"
+            [class.active]="activeFilter === 'Non-Vegetarian'">
+      🍗 Non-Vegetarian
+    </button>
+    <button (click)="onCategoryFilter('Vegetarian'); setActiveFilter('Vegetarian')"
+            [class.active]="activeFilter === 'Vegetarian'">
+      🥗 Vegetarian
+    </button>
+
+    <div class="btn-group"
+         appDropdownDirective>
+      <button type="button"
+              class="btn dropdown-toggle">
+        🌍 Cuisines <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a style="cursor: pointer;"
+             (click)="onCuisineFilter('Italian Cuisine'); setActiveFilter('Italian Cuisine')"
+             [class.active]="activeFilter === 'Italian Cuisine'">🍕 Italian</a></li>
+        <li><a style="cursor: pointer;"
+             (click)="onCuisineFilter('Indian Cuisine'); setActiveFilter('Indian Cuisine')"
+             [class.active]="activeFilter === 'Indian Cuisine'">🍛 Indian</a></li>
+        <li><a style="cursor: pointer;"
+             (click)="onCuisineFilter('Japanese Cuisine'); setActiveFilter('Japanese Cuisine')"
+             [class.active]="activeFilter === 'Japanese Cuisine'">🍣 Japanese</a></li>
+        <li><a style="cursor: pointer;"
+             (click)="onCuisineFilter('American Cuisine'); setActiveFilter('American Cuisine')"
+             [class.active]="activeFilter === 'American Cuisine'">🍔 American</a></li>
+        <li><a style="cursor: pointer;"
+             (click)="onCuisineFilter('Mexican Cuisine'); setActiveFilter('Mexican Cuisine')"
+             [class.active]="activeFilter === 'Mexican Cuisine'">🌮 Mexican</a></li>
+        <li><a style="cursor: pointer;"
+             (click)="onCuisineFilter('Asian Cuisine'); setActiveFilter('Asian Cuisine')"
+             [class.active]="activeFilter === 'Asian Cuisine'">🍚 Asian</a></li>
+        <li><a style="cursor: pointer;"
+             (click)="onCuisineFilter('Other Cuisine'); setActiveFilter('Other Cuisine')"
+             [class.active]="activeFilter === 'Other Cuisine'">🍛 Other Cuisine</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="recipes-container">
+
+  <!-- Recipe Detail -->
+  <div class="recipe-detail-section">
+    <ng-container *ngIf="filteredRecipes().length > 0; else noRecipeImage">
+      <router-outlet></router-outlet>
+    </ng-container>
+
+    <ng-template #noRecipeImage>
+      <div class="fallback-image-container">
+        <p @textAnimation>Please Select a Recipe to see its details</p>
+        <img src="assets/filter.png"
+             alt="No recipes illustration"
+             class="fallback-gif"
+             loading="lazy"
+             @imageRightAnimation>
+      </div>
+    </ng-template>
+  </div>
+
+  <!-- Recipe List Section -->
+  <div class="recipe-list-section">
+    <div *ngIf="filteredRecipes().length > 0; else noRecipes">
+      <app-auth-spinner *ngIf="isLoading()"></app-auth-spinner>
+      <div *ngIf="!isLoading()">
+        <app-recipe-list [recipes]="filteredRecipes()"></app-recipe-list>
+      </div>
+    </div>
+
+    <ng-template #noRecipes>
+      <div class="no-recipes" @fadeUpAnimation>
+        <p>
+          😕 No
+          <span *ngIf="activeFilter !== 'All'">{{ activeFilter }}</span>
+          recipes found.
+        </p>
+        <button class="reset-btn"
+                (click)="onShowAllRecipes(); setActiveFilter('All')">
+          🔄 Show All Recipes
+        </button>
+        <div class="fallback-image" @fallBackImageAnimation>
+          <img src="assets/filter2.gif"
+               alt="No recipes illustration"
+               class="fallback-gif-recipe"
+               loading="lazy">
+        </div>
+      </div>
+    </ng-template>
+  </div>
+
+</div>

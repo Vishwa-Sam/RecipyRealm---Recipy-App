@@ -1,0 +1,133 @@
+@if (error()) {
+<app-alert-message [message]="error()"
+                   (close)="closeError()"></app-alert-message>
+}
+@if (recipe()) {
+<div class="row"
+     [@recipeDetailAnimation]>
+    <div class="col-xs-12">
+        <img [src]="recipe()?.imagePath"
+             alt="{{ recipe()?.name }}"
+             class="img-responsive"
+             loading="lazy"
+             style="max-height: 300px; object-fit: contain;">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <h1>{{ recipe()?.name }}</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="btn-group"
+             appDropdownDirective>
+            <button type="button"
+                    class="btn dropdown-toggle">
+                Manage Recipe<span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a (click)="onAddToShoppingList()"
+                       style="cursor: pointer;">Add Ingredients
+                        To Shopping List</a></li>
+                <li><a (click)="toEditRecipe()"
+                       style="cursor: pointer;">Edit Recipe</a></li>
+                <li><a (click)="onDelete()"
+                       style="cursor: pointer;">Delete Recipe</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-6 col-sm-4">
+        <p>{{ recipe()?.duration }} 🕘</p>
+    </div>
+    <div class="col-xs-6 col-sm-4">
+        @if (recipe()?.category === 'Vegetarian') {
+        <p style="color: rgb(1, 92, 1);">🟢{{ recipe()?.category }}</p>
+        }@else {
+        <p style="color: rgb(153, 2, 2);">🔴{{ recipe()?.category }}</p>
+        }
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 para">
+        <p style="color: crimson; font-size: 2rem;">{{ recipe()?.cuisine }}</p>
+        <p class="description">{{ recipe()?.description }}</p>
+        <h3>Cooking Method :</h3>
+        <ol>
+            @for (step of recipe()?.cookingMethod; track $index) {
+            <li>{{ step }}</li>
+            }
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="list-group">
+            @for (ingredient of recipe()?.ingredients; track $index) {
+            <li class="list-group-item">
+                {{ ingredient.name }} - {{ ingredient.amount }} ({{ ingredient.measure }})
+            </li>
+            }
+        </ul>
+    </div>
+</div>
+
+<!-- <div class="col-xs-12"
+     *ngIf="recipe">
+    <div class="video-container"
+         *ngIf="safeUrl">
+        <iframe [src]="safeUrl"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                loading="lazy"
+                (load)="onIframeLoad()">
+        </iframe>
+    </div>
+</div> -->
+
+} @else {
+<div class="no-recipes">
+    <p>😕 No recipes found.</p>
+    <p>💾 Try loading your saved recipes.Press <strong style="font-size: 2.2rem;">Get Recipe</strong> from the top menu
+        under
+        <strong>Cookbook</strong> to get them!
+    </p>
+    <p></p>
+    <div class="fallback-image">
+        <img src="assets/filter2.gif"
+             alt="No recipes illustration"
+             class="fallback-gif-recipe"
+             loading="lazy">
+    </div>
+</div>
+}
+
+<div class="alert-message"
+     [ngClass]="{
+    'show': showAlert(),
+    'alert-add': alertType() === 'add',
+    'alert-update': alertType() === 'update',
+    'alert-delete': alertType() === 'delete'}">
+    {{ alertMessage() }}
+</div>
+
+<div class="center-dialog-backdrop"
+     *ngIf="showSaveAlert()">
+    <div class="center-dialog">
+        <p [innerHTML]="saveMessage()"></p>
+        <button class="close-btn"
+                (click)="closeSaveAlert()">Got it</button>
+        <br>
+        <img src="../../../assets/reminder.gif"
+             alt="reminder"
+             class="reminder">
+    </div>
+</div>

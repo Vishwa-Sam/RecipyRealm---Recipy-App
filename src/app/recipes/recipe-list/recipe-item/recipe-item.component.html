@@ -1,0 +1,28 @@
+<a style="cursor: pointer;"
+   [routerLink]="[id()]"
+   routerLinkActive="active"
+   class="recipe-card">
+  <div class="recipe-image">
+    <img [src]="recipe()?.imagePath"
+         alt="{{ recipe()?.name }}"
+         class="img-fluid" />
+  </div>
+
+  <div class="recipe-content">
+    <h4 class="name"
+        style="color:  #fa4f10">{{ recipe()?.name }}</h4>
+    <div class="duration-category">
+      <span class="duration">{{ recipe()?.duration }} 🕘</span>
+      <span class="category">
+        @if (recipe()?.category === 'Vegetarian') {
+        <p style="color: rgb(1, 92, 1);">🟢{{ recipe()?.category }}</p>
+        }@else {
+        <p style="color: rgb(153, 2, 2);">🔴{{ recipe()?.category }}</p>
+        }
+      </span>
+    </div>
+
+    <h5 class="cuisine">{{ recipe()?.cuisine}}</h5>
+    <p class="description">{{ recipe()?.description }}</p>
+  </div>
+</a>

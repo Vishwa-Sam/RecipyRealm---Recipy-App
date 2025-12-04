@@ -1,0 +1,234 @@
+@if (editMode) {
+<h2>✏️ Update Your Recipe</h2>
+}@else {
+<h2>🧑‍🍳 Create a Delicious New Recipe</h2>
+}
+<div class="row"
+     [@recipeFormAnimation]>
+    <div class="col-xs-12">
+        <form [formGroup]="recipeForm"
+              (ngSubmit)="onSubmit()">
+            <div class="row"
+                 style="margin-bottom: 15px;">
+                <div class="col-xs-12">
+                    <button type="submit"
+                            class="btn btn-success"
+                            style="margin-right:15px;"
+                            [disabled]="!recipeForm.valid">Save Recipe</button>
+                    <button type="button"
+                            class="btn btn-danger"
+                            (click)="onCancel()">Cancel</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="name">Recipe Name</label>
+                        <input type="text"
+                               id="name"
+                               class="form-control"
+                               formControlName="name">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="imagePath">Image URL</label>
+                        <input type="text"
+                               id="imagePath"
+                               class="form-control"
+                               formControlName="imagePath"
+                               #imagePath>
+                    </div>
+                </div>
+            </div>
+            @if (recipeForm.get('imagePath')?.value) {
+            <div class="row">
+                <div class="col-xs-12">
+                    <img [src]="imagePath.value || 'assets/placeholder.png'"
+                         class="img-responsive"
+                         loading="lazy">
+                </div>
+            </div>
+            }
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="duration">Cooking Time</label>
+                        <input type="text"
+                               id="duration"
+                               class="form-control"
+                               formControlName="duration">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group"
+                         appDropdownDirective>
+                        <label for="category">Category</label>
+                        <div class="custom-select"
+                             (click)="toggleDropdown('category')">
+                            {{ recipeForm.get('category')?.value }}
+                            <span class="arrow">▼</span>
+                        </div>
+                        <ul class="dropdown-menu"
+                            *ngIf="openDropdown === 'category'">
+                            <li *ngFor="let category of categories"
+                                [class.selected]="category === recipeForm.get('category')?.value"
+                                (click)="selectOption('category', category)">
+                                {{ category }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group"
+                         appDropdownDirective>
+                        <label for="cuisine">Cuisine</label>
+                        <div class="custom-select"
+                             (click)="toggleDropdown('cuisine')">
+                            {{ recipeForm.get('cuisine')?.value }}
+                            <span class="arrow">▼</span>
+                        </div>
+                        <ul class="dropdown-menu"
+                            *ngIf="openDropdown === 'cuisine'">
+                            <li *ngFor="let cuisine of cuisines"
+                                [class.selected]="cuisine === recipeForm.get('cuisine')?.value"
+                                (click)="selectOption('cuisine', cuisine)">
+                                {{ cuisine }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="description">Recipe Description</label>
+                        <textarea type="text"
+                                  id="description"
+                                  class="form-control"
+                                  rows="6"
+                                  formControlName="description"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row"
+                 formArrayName="cookingMethod">
+                <div class="col-xs-12">
+                    <h6>Cooking Method</h6>
+                    <div class="row"
+                         *ngFor="let stepCtrl of cookMethodControls; let i = index"
+                         style="margin-top: 10px;">
+                        <div class="col-xs-10">
+                            <input type="text"
+                                   class="form-control"
+                                   [formControlName]="i"
+                                   placeholder="Enter step" />
+                        </div>
+                        <div class="col-xs-2">
+                            <button type="button"
+                                    class="btn btn-danger"
+                                    (click)="onRemoveMethodStep(i)">
+                                X
+                            </button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button type="button"
+                                    class="btn btn-success"
+                                    (click)="onAddMethodStep()"
+                                    style="margin-right: 15px;">
+                                Add Cooking Steps
+                            </button>
+                            <button type="button"
+                                    class="btn btn-danger"
+                                    (click)="onClearAllMethodSteps()"
+                                    [disabled]="cookingMethod.length === 0">
+                                Clear All Steps
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12"
+                     formArrayName="ingredients">
+                    <h6>Add Ingredients</h6>
+                    <div class="row"
+                         *ngFor="let ingredientCtrl of ingredientsControls; let i = index"
+                         [formGroupName]="i"
+                         style="margin-top: 10px;">
+                        <div class="col-xs-8">
+                            <input type="text"
+                                   class="form-control"
+                                   formControlName="name">
+                        </div>
+                        <div class="col-xs-2">
+                            <input type="number"
+                                   class="form-control"
+                                   formControlName="amount">
+                        </div>
+                        <div class="col-xs-2">
+                            <button type="button"
+                                    class="btn btn-danger"
+                                    (click)="onRemoveIngredient(i)">X</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button type="button"
+                                    class="btn btn-success"
+                                    style="margin-right: 15px;"
+                                    (click)="onAddIngredient()">Add Ingredients</button>
+                            <button class="btn btn-danger"
+                                    type="button"
+                                    (click)="onClearAllIngredients()"
+                                    [disabled]="ingredients.length === 0">Clear All Ingredients
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!-- Normal alert (top-left corner) -->
+        <div class="alert-message"
+             [ngClass]="{
+       'show': showAlert(),
+       'alert-add': alertType() === 'add',
+       'alert-update': alertType() === 'update',
+       'alert-cancel': alertType() === 'cancel'
+     }">
+            {{ alertMessage() }}
+        </div>
+
+        <!-- Center alert (dialog box) -->
+        <div class="center-dialog-backdrop"
+             *ngIf="showSaveAlert()">
+            <div class="center-dialog">
+                <p [innerHTML]="saveMessage()"></p>
+                <button class="close-btn"
+                        (click)="closeSaveAlert()">Got it</button>
+                <br>
+                <img src="../../../assets/reminder.gif"
+                     alt="reminder"
+                     class="reminder">
+            </div>
+        </div>
+
+    </div>
+</div>

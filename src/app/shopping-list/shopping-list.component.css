@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+.shopping-top {
+  margin-bottom: 30px;
+}
+
+.shopping-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.gif-container {
+  flex: 1 1 calc(25% - 15px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.shopping-gif {
+  width: auto;
+  height: 250px;
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shopping-gif:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.list-group-item {
+  display: block;
+  margin-bottom: 8px;
+  padding: 12px 16px;
+  border: 2.5px solid #ffa600;
+  border-radius: 15px;
+  background-color: #fcf2e0;
+  font-weight: bolder;
+  font-size: 1.4rem;
+  color: #1a1a1a;
+  transition: all 0.25s ease-in-out;
+}
+
+.list-group-item:hover {
+  background-color: #fcf2e0;
+  border-color: #ffa600;
+  transform: scale(1.02);
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 1200px) {
+  .gif-container {
+    flex: 1 1 calc(33.33% - 20px);
+  }
+
+  .shopping-gif {
+    height: 230px;
+  }
+}
+
+@media (max-width: 992px) {
+  .gif-container {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .shopping-gif {
+    height: 210px;
+  }
+
+  .list-group-item {
+    padding: 10px 14px;
+    font-size: 1.25rem;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gif-container {
+    flex: 1 1 100%;
+  }
+
+  .shopping-gif {
+    height: 190px;
+  }
+
+  .list-group-item {
+    padding: 9px 12px;
+    font-size: 1.15rem;
+    border-radius: 10px;
+  }
+
+  .list-group-item:hover {
+    transform: scale(1.015);
+  }
+}
+
+@media (max-width: 480px) {
+  .shopping-gif {
+    height: 170px;
+  }
+
+  .list-group-item {
+    padding: 8px 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border-width: 2px;
+  }
+}
+
+@media (max-width: 360px) {
+  .list-group-item {
+    padding: 7px 8px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+  }
+
+  .shopping-gif {
+    height: 150px;
+  }
+}

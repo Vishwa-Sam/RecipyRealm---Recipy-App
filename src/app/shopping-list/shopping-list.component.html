@@ -1,0 +1,24 @@
+<div class="shopping-top">
+  <app-shopping-list-edit></app-shopping-list-edit>
+  <hr>
+  <ul class="list-group">
+    <a class="list-group-item"
+       style="cursor: pointer;"
+       *ngFor="let ingredientsList of ingredients(); let i = index"
+       (click)="onEditItem(i)"
+       [@updateIngredients]>
+      {{ ingredientsList.name }} - {{ ingredientsList.amount }} ({{ ingredientsList.measure }})
+    </a>
+  </ul>
+</div>
+
+<div class="shopping-bottom"
+     [@gifAnimation]>
+  <div class="gif-container"
+       *ngFor="let gif of gifList">
+    <img [src]="gif"
+         alt="Shopping GIF"
+         class="shopping-gif"
+         loading="lazy">
+  </div>
+</div>

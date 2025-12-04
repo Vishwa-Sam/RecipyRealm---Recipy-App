@@ -1,0 +1,12 @@
+<div class="backdrop"
+     (click)="onClose()"></div>
+<div class="alert-box">
+  <p>{{ message() }}</p>
+  <img src="../../../assets/minnion.gif"
+       alt="funny error"
+       class="error-gif">
+  <div class="alert-box-actions">
+    <button class="btn btn-danger"
+            (click)="onClose()">Close</button>
+  </div>
+</div>

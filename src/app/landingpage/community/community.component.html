@@ -1,0 +1,231 @@
+<div @contentFadeInOut>
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Connect with Our Cooking Community</h1>
+        <p>
+          Discover a world where food lovers meet, recipes come alive, and inspiration is shared daily.
+          Whether you’re a beginner or a pro, RecipyRealm connects you to thousands of passionate cooks.
+        </p>
+        <div class="button-group">
+          <button (click)="onNavigate()"
+                  class="button primary-btn">Sign Up</button>
+          <button (click)="onStartApp()"
+                  class="button secondary-btn">Use App</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="../../../assets/community/community1.jpg"
+             alt="Community cooking">
+      </div>
+    </div>
+  </section>
+
+  <section class="our-story container">
+    <h2>Our Community</h2>
+    <p>
+      The <strong style="color: #ff0303;">RecipyRealm Community</strong> is the heartbeat of our platform — a warm,
+      welcoming space where
+      home cooks, food explorers, and creators come together to learn, share, and grow.
+      What makes our community special isn’t just the recipes, but the people behind them.
+      Every comment, shared dish, and kitchen tip reflects a passion for food that connects us all.
+      Here, cooks of every skill level inspire one another — experimenting with flavors,
+      celebrating cultural traditions, and discovering new techniques every day.
+      At RecipyRealm, community means support, creativity, and the joy of exchanging ideas that bring
+      kitchens to life around the world.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="section-container">
+      <div class="section-image">
+        <img src="../../../assets/community/community2.jpg"
+             alt="Cooking community"
+             inView
+             (inView)="imgState[0] = 'visible'"
+             [@imageAnimation]="imgState[0] || 'hidden'">
+      </div>
+      <div class="section-content">
+        <h2>Discover Your New Cooking Community</h2>
+        <p>
+          At RecipyRealm, you’ll find people who share your tastes, goals, and curiosity for food.
+          Explore global cuisines, connect with home cooks, and grow together through creativity.
+        </p>
+        <ul class="section-list">
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/community/icons/utensils-crossed.svg"
+                   alt="Find cuisines">
+            </div>
+            <div><strong>Find</strong> cuisines you love — from rustic Italian to vibrant Asian fusion dishes.</div>
+          </li>
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/community/icons/heart-handshake.svg"
+                   alt="Join communities">
+            </div>
+            <div><strong>Join</strong> meal-prep and health-focused communities that keep you inspired.</div>
+          </li>
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/community/icons/cake.svg"
+                   alt="Explore desserts">
+            </div>
+            <div><strong>Explore</strong> bakers, pastry chefs, and dessert lovers from every corner of the world.</div>
+          </li>
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/community/icons/chef-hat.svg"
+                   alt="Follow chefs">
+            </div>
+            <div><strong>Follow</strong> chefs and creators who post step-by-step tutorials and quick kitchen hacks.
+            </div>
+          </li>
+        </ul>
+        <p>No matter your style — comfort cooking or fine dining — there’s a corner of RecipyRealm waiting for you.</p>
+        <a (click)="onNavigate()"
+           class="btn primary">Explore Communities &#10140;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt-bg">
+    <div class="section-container">
+      <div class="section-content">
+        <h2>All the Tools You Need in One App</h2>
+        <p>
+          We’ve brought everything you need for cooking, organizing, and sharing recipes into one
+          beautifully designed platform — made for simplicity and fun.
+        </p>
+        <ul class="section-list">
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/community/icons/notebook-pen.svg"
+                   alt="Save recipes">
+            </div>
+            <div><strong>Save</strong> recipes from the web or upload your family’s secret favorites.</div>
+          </li>
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/community/icons/shopping-cart.svg"
+                   alt="Shopping list">
+            </div>
+            <div><strong>Generate</strong> smart shopping lists automatically — no more forgetting ingredients!</div>
+          </li>
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/community/icons/share-2.svg"
+                   alt="Share recipes">
+            </div>
+            <div><strong>Share</strong> recipes with friends and cook together in real time.</div>
+          </li>
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/community/icons/notebook-pen (1).svg"
+                   alt="Create recipes">
+            </div>
+            <div><strong>Create</strong> your own recipes, add photos, and customize servings instantly.</div>
+          </li>
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/community/icons/smartphone.svg"
+                   alt="Sync devices">
+            </div>
+            <div><strong>Sync</strong> your recipes across all your devices — your kitchen companion on the go.</div>
+          </li>
+        </ul>
+        <p>RecipyRealm is designed to make your everyday cooking effortless — from planning meals to plating dishes.</p>
+        <a (click)="onNavigate()"
+           class="btn primary">Get Started &#10140;</a>
+      </div>
+      <div class="section-image">
+        <img src="../../../assets/community/community4.jpg"
+             alt="Recipe app tools"
+             inView
+             (inView)="imgState[1] = 'visible'"
+             [@imageAnimation]="imgState[1] || 'hidden'">
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-container">
+      <div class="section-image">
+        <img src="../../../assets/community/community3.jpg"
+             alt="Sharing recipes"
+             inView
+             (inView)="imgState[2] = 'visible'"
+             [@imageAnimation]="imgState[2] || 'hidden'">
+      </div>
+      <div class="section-content">
+        <h2>Share Your Favorite Recipes with the World</h2>
+        <p>
+          Food is meant to be shared — and with RecipyRealm, your creations can inspire millions.
+          From family classics to bold new ideas, your kitchen stories deserve the spotlight.
+        </p>
+        <ul class="section-list">
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/community/icons/users.svg"
+                   alt="Create community">
+            </div>
+            <div><strong>Create your own community.</strong> Start a space for others who share your passion.</div>
+          </li>
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/community/icons/message-circle-more.svg"
+                   alt="Invite others">
+            </div>
+            <div><strong>Invite others to share recipes.</strong> Collaborate, comment, and cook together.</div>
+          </li>
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/community/icons/folder-heart.svg"
+                   alt="Curate collections">
+            </div>
+            <div><strong>Curate collections.</strong> Organize your favorite recipes by season, mood, or cuisine.</div>
+          </li>
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/community/icons/file-video-camera.svg"
+                   alt="Upload videos">
+            </div>
+            <div><strong>Upload videos.</strong> Show how your dishes come to life step-by-step.</div>
+          </li>
+        </ul>
+        <p>Inspire, teach, and learn — one recipe at a time. Your creativity can spark someone else’s next meal.</p>
+        <a (click)="onNavigate()"
+           class="btn primary">Start Sharing &#10140;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bottom-header">
+    <h2>Join the Global Recipe Movement</h2>
+    <p>
+      Thousands of food lovers are already discovering, sharing, and connecting through RecipyRealm.
+      Dive into communities that celebrate diversity, creativity, and connection — all through cooking.
+    </p>
+    <div class="app-links">
+      <a (click)="onNavigate()"
+         class="btn primary">Explore Communities &#10140;</a>
+    </div>
+  </section>
+
+  <section class="call-to-action">
+    <h2>Get Our Award-Winning App</h2>
+    <p>
+      RecipyRealm makes saving, sharing, and shopping for recipes easier than ever.
+      Cook smarter, not harder — with tools designed to fit your lifestyle.
+    </p>
+    <div class="app-links">
+      <a href="https://www.apple.com/app-store/"><img src="../../../assets/community/app-store.png"
+             alt="App Store"></a>
+      <a href="https://play.google.com/store"><img src="../../../assets/community/playstore.png"
+             alt="Google Play"></a>
+    </div>
+    <p class="cta-note">
+      Available on iOS and Android. Download now and make every meal a masterpiece.
+    </p>
+  </section>
+</div>

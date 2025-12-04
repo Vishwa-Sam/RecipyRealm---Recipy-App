@@ -1,0 +1,336 @@
+<main class="article-page" @contentFadeInOut>
+  <section class="featured-article">
+    <div class="featured-inner">
+      <div class="featured-image">
+        <img src="../../../../assets/blog/extra-content/main.jpg"
+             alt="Top 5 International Snacks You Should Try" 
+              inView
+           (inView)="imgState[0] = 'visible'"
+           [@imageAnimation]="imgState[0] || 'hidden'"/>
+      </div>
+
+      <div class="featured-content">
+        <span class="post-category">World Recipes</span>
+        <h1>Top 5 International Snacks You Should Try</h1>
+        <p>
+          From crispy street bites to soft, chewy sweets, every culture has its own beloved snack that tells a story.
+          These five international snacks are flavorful introductions to different corners of the world —
+          each offering a unique taste, texture, and cultural twist that’ll make your snacking time much more exciting.
+        </p>
+        <p>
+          Whether it’s a savory Indian samosa, a creamy French madeleine, or Japan’s tender mochi,
+          each one celebrates tradition in its own way. Let’s take a delicious trip around the globe — one bite at a
+          time!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SNACK SECTIONS ========== -->
+  <section class="extra-content">
+    <!-- 1. Italy -->
+    <h2>🇮🇹 Italian Arancini – Golden Rice Balls</h2>
+    <div class="content-block">
+      <p>
+        Crispy on the outside and creamy within, Arancini are deep-fried risotto balls that originated in Sicily.
+        Traditionally stuffed with a filling of mozzarella, peas, and ragù (meat sauce), these golden spheres are
+        both comforting and indulgent. Each bite bursts with a creamy center wrapped in a crunchy breadcrumb coating —
+        making them perfect for parties, picnics, or cozy evenings.
+      </p>
+      <img src="../../../../assets/blog/extra-content/italian.jpg"
+           alt="Italian Arancini Rice Balls"
+           class="article-img" 
+            inView
+           (inView)="imgState[1] = 'visible'"
+           [@imageAnimation]="imgState[1] || 'hidden'"/>
+      <p>
+        The name “Arancini” literally means “little oranges,” inspired by their golden color after frying.
+        They’re best enjoyed warm, served with marinara or arrabbiata sauce for an authentic Italian touch.
+        Once you make them, you’ll realize they’re more than just snacks — they’re a handheld taste of Italian
+        tradition.
+      </p>
+
+      <div class="recipe-box">
+        <h3>🍚 Arancini Recipe</h3>
+        <div class="recipe-lists">
+          <ul class="ingredients">
+            <li>2 cups cooked risotto</li>
+            <li>½ cup mozzarella cubes</li>
+            <li>½ cup breadcrumbs</li>
+            <li>2 eggs (beaten)</li>
+            <li>½ cup flour</li>
+            <li>Oil for deep frying</li>
+          </ul>
+
+          <ol class="steps">
+            <li>
+              Take a small handful of cooked and cooled risotto. Flatten it in your palm and place
+              a small cube of mozzarella (or your preferred filling) in the center.
+            </li>
+            <li>
+              Gently wrap the risotto around the filling, shaping it into a tight ball.
+              If the mixture sticks, wet your hands slightly.
+            </li>
+            <li>
+              Roll each ball first in flour, then dip it in beaten eggs, and finally coat it with breadcrumbs.
+              Press lightly so the coating sticks firmly.
+            </li>
+            <li>
+              Heat oil in a deep pan to 170–180°C (340–355°F). Fry the arancini in small batches until
+              they turn golden and crisp on all sides.
+            </li>
+            <li>
+              Remove and drain on paper towels. Serve immediately with warm marinara or arrabbiata sauce.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Japan -->
+    <h2>🍡 Japanese Daifuku Mochi – Sweet Rice Cake with a Soft Heart</h2>
+    <div class="content-block">
+      <img src="../../../../assets/blog/extra-content/japanese snacks.jpg"
+           alt="Japanese Daifuku Mochi"
+           class="article-img" 
+            inView
+           (inView)="imgState[2] = 'visible'"
+           [@imageAnimation]="imgState[2] || 'hidden'"/>
+      <p>
+        Daifuku Mochi is a soft, chewy dessert made from glutinous rice flour (mochiko) filled with a sweet paste —
+        most commonly smooth red bean (anko). The delicate rice dough is steamed, pounded, and shaped by hand,
+        resulting in a texture that’s tender yet elastic. It’s a bite-sized treat that captures Japan’s love for
+        simplicity and balance.
+      </p>
+      <p>
+        Modern variations include strawberry-filled “Ichigo Daifuku,” matcha cream, or even ice cream centers.
+        Mochi represents harmony — the perfect combination of chewiness, sweetness, and minimalism.
+        Pair it with a cup of green tea, and you’ve got one of Japan’s most elegant snack experiences.
+      </p>
+
+      <div class="recipe-box">
+        <h3>🍵 Daifuku Mochi Recipe</h3>
+        <div class="recipe-lists">
+          <ul class="ingredients">
+            <li>1 cup glutinous rice flour</li>
+            <li>¼ cup sugar</li>
+            <li>¾ cup water</li>
+            <li>½ cup sweet red bean paste</li>
+            <li>Cornstarch for dusting</li>
+          </ul>
+
+          <ol class="steps">
+            <li>
+              In a bowl, whisk together glutinous rice flour, sugar, and water until completely smooth.
+              Make sure no lumps remain.
+            </li>
+            <li>
+              Microwave the mixture on high for 1 minute. Stir, then microwave again for 1–2 minutes
+              until it becomes thick, shiny, and sticky.
+            </li>
+            <li>
+              Dust a clean surface generously with cornstarch. Transfer the hot mochi dough onto it and
+              let it cool until warm but still pliable.
+            </li>
+            <li>
+              Divide the dough into small pieces. Flatten each piece into a disk and place a small ball
+              of red bean paste in the center.
+            </li>
+            <li>
+              Carefully stretch the dough around the filling and pinch the bottom closed.
+              Shape into smooth balls and dust lightly with more cornstarch.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Mexico -->
+    <h2>🌶️ Mexican Elote – Grilled Street Corn</h2>
+    <div class="content-block">
+      <p>
+        Elote is one of Mexico’s most iconic street foods — whole corn on the cob grilled over open flames until smoky
+        and tender.
+        It’s then slathered with creamy mayonnaise, sprinkled generously with cotija cheese, lime juice, and chili
+        powder.
+        The combination of charred sweetness, salt, and tangy spice is pure comfort food magic.
+      </p>
+      <img src="../../../../assets/blog/extra-content/mexican.jpg"
+           alt="Mexican Elote Street Corn"
+           class="article-img" 
+            inView
+           (inView)="imgState[3] = 'visible'"
+           [@imageAnimation]="imgState[3] || 'hidden'"/>
+      <p>
+        This snack captures the essence of Mexican street culture — lively, colorful, and full of flavor.
+        You can also make “Esquites,” the off-the-cob version served in a cup with all the same toppings.
+        Whether served at a fair, beach, or barbecue, Elote turns ordinary corn into a celebration.
+      </p>
+
+      <div class="recipe-box">
+        <h3>🌽 Elote Recipe</h3>
+        <div class="recipe-lists">
+          <ul class="ingredients">
+            <li>4 ears of corn</li>
+            <li>¼ cup mayonnaise</li>
+            <li>¼ cup cotija cheese (crumbled)</li>
+            <li>1 tsp chili powder</li>
+            <li>1 lime (cut into wedges)</li>
+          </ul>
+
+          <ol class="steps">
+            <li>
+              Preheat a grill or stovetop griddle. Place the corn directly on the heat and grill,
+              turning frequently, until the kernels are charred and tender.
+            </li>
+            <li>
+              While the corn is hot, brush each cob generously with mayonnaise or Mexican crema.
+              Make sure it coats evenly.
+            </li>
+            <li>
+              Sprinkle crumbled cotija cheese over the entire cob.
+              The heat helps the cheese stick beautifully.
+            </li>
+            <li>
+              Season with chili powder, smoked paprika, or Tajín for a spicy kick.
+            </li>
+            <li>
+              Finish with a squeeze of fresh lime juice and serve immediately.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. India -->
+    <h2>🍠 Indian Samosas – Crispy Triangles of Spice</h2>
+    <div class="content-block">
+      <img src="../../../../assets/blog/extra-content/indian.jpg"
+           alt="Indian Samosas"
+           class="article-img" 
+            inView
+           (inView)="imgState[4] = 'visible'"
+           [@imageAnimation]="imgState[4] || 'hidden'"/>
+      <p>
+        Samosas are India’s signature savory snack — golden, triangular pastries filled with spiced potatoes,
+        peas, and fragrant herbs. The outer crust is crisp and flaky, while the filling is rich, warm, and comforting.
+        Each bite offers a perfect balance of textures and flavors, often complemented by tangy tamarind or mint
+        chutney.
+      </p>
+      <p>
+        Though most popular in India, samosas have traveled far and wide — from Middle Eastern sambusas to African
+        versions with meat fillings.
+        Enjoy them fresh from the fryer with masala chai for an authentic street-food moment.
+        It’s the kind of snack that brings people together, no matter where you are.
+      </p>
+      <div class="recipe-box">
+        <h3>🥔 Samosa Recipe</h3>
+        <div class="recipe-lists">
+          <ul class="ingredients">
+            <li>2 cups mashed potatoes</li>
+            <li>½ cup green peas</li>
+            <li>1 tsp garam masala</li>
+            <li>½ tsp cumin seeds</li>
+            <li>Pastry sheets or dough</li>
+            <li>Oil for frying</li>
+          </ul>
+
+          <ol class="steps">
+            <li>
+              Heat oil in a pan and add cumin seeds. Once fragrant, add peas and mashed potatoes.
+              Season with garam masala, salt, chili powder, and optional coriander or ginger.
+            </li>
+            <li>
+              Let the filling cook for 3–4 minutes. Mix well and allow it to cool completely
+              before assembling the samosas.
+            </li>
+            <li>
+              Cut pastry sheets or rolled dough into strips. Place a spoonful of filling at the end
+              and fold into a triangular pocket, sealing edges with a flour-water paste.
+            </li>
+            <li>
+              Heat oil for deep frying. Fry samosas on medium heat until they become crisp,
+              golden, and flaky.
+            </li>
+            <li>
+              Serve hot with tamarind, mint chutney, or ketchup.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. France -->
+    <h2>🥐 French Madeleines – Soft Shell-Shaped Cakes</h2>
+    <div class="content-block">
+      <p>
+        Light, buttery, and delicately sweet, Madeleines are small shell-shaped cakes that have become a symbol of
+        French teatime.
+        They’re made with simple ingredients — flour, eggs, sugar, and butter — but their charm lies in the tender crumb
+        and lemon-scented aroma.
+        A gentle dip in tea or coffee releases their delicate flavor and instantly transports you to a Parisian café.
+      </p>
+      <img src="../../../../assets/blog/extra-content/french.jpg"
+           alt="French Madeleines"
+           class="article-img" 
+            inView
+           (inView)="imgState[5] = 'visible'"
+           [@imageAnimation]="imgState[5] || 'hidden'"/>
+      <p>
+        Madeleines were first popularized in the 18th century and have since become a staple in French patisseries.
+        Modern takes include variations with chocolate, orange zest, or even lavender.
+        These cakes prove that sometimes the simplest recipes can leave the most lasting impressions.
+      </p>
+
+      <div class="recipe-box">
+        <h3>🍋 Madeleines Recipe</h3>
+        <div class="recipe-lists">
+          <ul class="ingredients">
+            <li>½ cup butter (melted)</li>
+            <li>¾ cup flour</li>
+            <li>½ cup sugar</li>
+            <li>2 eggs</li>
+            <li>Zest of 1 lemon</li>
+            <li>½ tsp baking powder</li>
+          </ul>
+
+          <ol class="steps">
+            <li>
+              Whisk eggs and sugar together for several minutes until pale, thick, and fluffy.
+              This is what gives Madeleines their signature lift.
+            </li>
+            <li>
+              Gently fold in flour, baking powder, and lemon zest.
+              Add melted butter last and mix slowly to avoid deflating the batter.
+            </li>
+            <li>
+              Chill the batter for at least 30 minutes.
+              This resting step helps create the traditional “hump” when baking.
+            </li>
+            <li>
+              Spoon the batter into greased and floured madeleine molds, filling each cavity
+              about ¾ full.
+            </li>
+            <li>
+              Bake at 180°C (350°F) for 10–12 minutes until golden.
+              Cool on a rack and dust with powdered sugar before serving.
+            </li>
+          </ol>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Closing -->
+    <h2>🌍 A Bite of the World</h2>
+    <p class="closure">
+      These five snacks prove that deliciousness knows no borders. Each one carries a story of culture and comfort.
+      Try them at home and discover a taste of the world — one snack at a time.
+    </p>
+
+    <div class="btn-wrap">
+      <button class="btn primary"
+              (click)="toBlogPage()">← Back to Blog</button>
+    </div>
+  </section>
+</main>

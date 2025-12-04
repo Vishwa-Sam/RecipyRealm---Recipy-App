@@ -1,0 +1,319 @@
+<main class="article-page"
+      @contentFadeInOut>
+  <section class="featured-article">
+    <div class="container featured-inner">
+      <div class="featured-image"
+           inView
+           (inView)="imgState[0] = 'visible'"
+           [@imageAnimation]="imgState[0] || 'hidden'">
+        <img src="../../../assets/blog/cookies.jpg"
+             alt="No Bake Lemon Oatmeal Cookies" />
+      </div>
+
+      <div class="featured-content">
+        <span class="post-category">Recipes</span>
+        <h1>No Bake Lemon Oatmeal Cookies</h1>
+        <p>
+          These bright, chewy cookies come together in minutes — no oven required.
+          Perfect for summer treats or quick snacks that taste like sunshine.
+          The combination of zesty lemon and creamy nut butter gives every bite a
+          fresh, satisfying flavor. What makes them even better is how simple
+          they are — just mix, chill, and enjoy! Whether you're making a quick
+          dessert after dinner or a mid-afternoon pick-me-up, these cookies
+          deliver both nutrition and nostalgia without the need for baking. Once
+          you try them, they might just become your favorite no-fuss treat.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXTRA CONTENT SECTIONS ========== -->
+  <section class="extra-content container">
+    <!-- 1. Health Benefits -->
+    <h2>🌿 Why No-Bake Cookies Are a Healthier Treat</h2>
+    <div class="content-block">
+
+      <p class="content-text">
+        No-bake cookies skip the heavy butter and refined flour often used in baked desserts.
+        They’re packed with oats for fiber, nut butter for protein, and honey for natural sweetness.
+        Plus, skipping the oven means more nutrients stay intact — and you save energy too!
+        Oats provide slow-releasing carbs that keep you full for longer, while lemon adds a
+        refreshing dose of vitamin C to boost your immune system. By relying on natural
+        ingredients and minimal processing, these cookies let you enjoy indulgence in a much
+        lighter way. Think of them as a balance between dessert and energy snack — great for
+        workouts, hikes, or late-night cravings when you want something sweet but wholesome.
+      </p>
+      <img src="../../../assets/blog/extra-content/lemon-cookies.jpg"
+           alt="Healthy no-bake cookies"
+           class="article-img"
+           inView
+           (inView)="imgState[1] = 'visible'"
+           [@imageAnimation]="imgState[1] || 'hidden'" />
+    </div>
+
+    <!-- 2. Recipe -->
+    <h2>🍋 No Bake Lemon Oatmeal Cookies Recipe</h2>
+    <p class="recipe-intro">
+      These no-bake lemon cookies are fresh, bright, and perfect for a quick snack.
+      They require no oven, come together in minutes, and deliver a punch of citrusy flavor.
+      Great for summer days, healthy lunchboxes, or whenever you want something sweet without the fuss.
+    </p>
+    <div class="recipe-block">
+      <div class="recipe-row">
+        <img src="../../../assets/blog/extra-content/mixing dough.jpg"
+             alt="Mixing lemon oatmeal cookie dough"
+             class="article-img"
+             inView
+             (inView)="imgState[2] = 'visible'"
+             [@imageAnimation]="imgState[2] || 'hidden'" />
+        <div class="recipe-lists">
+
+          <ul class="ingredients">
+            <li>1 ½ cups rolled oats</li>
+            <li>½ cup almond butter (or peanut butter)</li>
+            <li>¼ cup honey or maple syrup</li>
+            <li>Zest of 1 large lemon</li>
+            <li>2 tbsp fresh lemon juice</li>
+            <li>½ tsp vanilla extract</li>
+            <li>Pinch of sea salt</li>
+          </ul>
+
+          <ol class="steps">
+            <li>
+              In a medium bowl, stir together the almond butter and honey until fully combined.
+              If the mixture is too stiff to mix easily, microwave it for 10–15 seconds to soften.
+            </li>
+            <li>
+              Add the lemon zest, lemon juice, vanilla, and salt.
+              Whisk or stir well until the mixture becomes smooth and glossy.
+              The lemon juice may slightly loosen the mixture — that’s perfect.
+            </li>
+            <li>
+              Pour in the rolled oats and mix using a spatula or your hands.
+              Keep folding until every oat is coated and the dough begins to firm up.
+              If the mixture feels too wet, add 1–2 tablespoons of oats.
+            </li>
+            <li>
+              Let the dough rest for 5 minutes.
+              This allows the oats to absorb moisture, thicken, and bind naturally —
+              making it easier to shape the cookies.
+            </li>
+            <li>
+              Scoop out small portions using a spoon or cookie scoop.
+              Roll into balls or gently flatten with your palm to form cookie shapes.
+              Place them on a parchment-lined tray.
+            </li>
+            <li>
+              Chill the cookies in the refrigerator for 20–30 minutes.
+              This firms them up and heightens the lemon flavor.
+              They will become soft-chewy and hold their shape perfectly.
+            </li>
+            <li>
+              Store the cookies in an airtight container in the fridge for up to 1 week,
+              or freeze for up to 2 months.
+              The flavor becomes stronger and brighter after a day!
+            </li>
+          </ol>
+
+          <!-- EXTRA CONTENT -->
+          <div class="extra-tips">
+            <div class="variation">
+              <h3>🍯 Flavor Variations</h3>
+              <ul>
+                <li><strong>Coconut Lemon:</strong> Add 2–3 tbsp shredded coconut.</li>
+                <li><strong>Blueberry Lemon:</strong> Mix in a handful of dried blueberries.</li>
+                <li><strong>Protein Boost:</strong> Replace 2 tbsp oats with vanilla protein powder.</li>
+              </ul>
+            </div>
+
+            <div class="advice">
+              <h3>🥡 Storage</h3>
+              <p>
+                These cookies keep well in the fridge for up to a week, or freeze for 2–3 months.
+                They stay soft but get firmer as they chill — perfect for meal prep snacks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-row reverse">
+        <img src="../../../../assets/blog/extra-content/cooking.jpg"
+             alt="Mixing lemon oatmeal cookie dough"
+             class="article-img"
+             style="height: 70vh;"
+             inView
+             (inView)="imgState[3] = 'visible'"
+             [@imageAnimation]="imgState[3] || 'hidden'" />
+        <div class="recipe-lists">
+
+          <div class="love-box">
+            <h3>💛 Why You’ll Love This Recipe</h3>
+            <ul>
+              <li>Requires no baking — ready in minutes with zero mess.</li>
+              <li>Bright, fresh lemon flavor that tastes refreshing and natural.</li>
+              <li>Made with simple, wholesome ingredients you probably already have.</li>
+            </ul>
+          </div>
+
+          <div class="nutrition-box">
+            <h3>📊 Nutrition (Per Cookie)</h3>
+            <ul>
+              <li>Calories: ~85</li>
+              <li>Carbohydrates: 10g</li>
+              <li>Protein: 2g</li>
+              <li>Fat: 4g</li>
+              <li>Fiber: 1.5g</li>
+            </ul>
+            <p class="note">*Values are approximate and may vary based on ingredients used.</p>
+          </div>
+          <div class="chef-notes">
+            <h3>👩‍🍳 Chef’s Notes</h3>
+            <p>
+              For the brightest lemon flavor, always use fresh lemon zest — it releases aromatic oils that
+              bottled juice can’t replace. If your mixture feels too sticky, chill it briefly before shaping.
+              For a firmer bite, add an extra tablespoon of oats.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Alternate Ingredients -->
+    <h2>🌰 Fun Ingredient Swaps</h2>
+
+    <div class="content-block">
+      <img src="../../../assets/blog/extra-content/swap ingre.jpg"
+           alt="Alternate ingredients for cookies"
+           class="article-img swap-img"
+           inView
+           (inView)="imgState[4] = 'visible'"
+           [@imageAnimation]="imgState[4  ] || 'hidden'" />
+
+      <div class="swap-section">
+
+        <h3 class="swap-warning">⚠️ Little Warning Before You Go Wild With Swaps…</h3>
+        <p class="swap-note">
+          Swapping ingredients is fun — but remember: one tiny change can turn
+          “yum!” into “why is this chewy like rubber?” So experiment… responsibly 😄💛
+        </p>
+
+        <ul class="swaps">
+          <li>🥜 Swap almond butter with cashew or sunflower butter for a smooth, nut-free twist.</li>
+          <li>🥥 Add shredded coconut for extra texture and a tropical vibe.</li>
+          <li>🍊 Replace lemon with orange or lime to switch up the citrus mood.</li>
+          <li>🌱 Mix in chia seeds or crushed almonds for added crunch.</li>
+          <li>🍁 Use maple syrup instead of honey for a richer, deeper sweetness.</li>
+          <li>✨ Add a pinch of cinnamon or cardamom for warm, cozy flavor notes.</li>
+          <li>🍇 Fold in dried cranberries or raisins for sweet chewy bursts.</li>
+          <li>💪 Swap a little oats for protein powder if you want a power snack.</li>
+          <li>🥥 Add 1–2 tsp melted coconut oil for a softer, richer bite.</li>
+          <li>🍶 Stir in a spoon of Greek yogurt for extra creaminess (but don’t overdo it!).</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- 4. Closure -->
+    <h2>💛 A Sweet Note</h2>
+    <p class="closure">
+      These no-bake lemon oatmeal cookies are proof that healthy and easy can
+      also be incredibly delicious. Keep a batch in your fridge for guilt-free
+      snacking or to share a little sunshine with friends! The beauty of this
+      recipe lies in its simplicity — no baking, no waiting, and no complicated
+      steps. Just pure, wholesome flavor. Whether you're preparing them for
+      yourself, packing them in lunchboxes, or gifting them in jars, these cookies
+      never fail to brighten someone's day. Remember, good food doesn’t have to
+      be fancy — it just needs to make you feel good from the inside out.
+    </p>
+
+    <div class="btn-wrap">
+      <button class="btn primary"
+              (click)="toBlogPage()">← Back to Blog</button>
+    </div>
+
+    <!-- 5. Other Suggestions -->
+    <h2>✨ More No-Bake Inspirations</h2>
+    <div class="suggestion-section">
+      <div class="suggestion-card"
+           inView
+           (inView)="cardState[0] = 'visible'"
+           [@cardAnimation]="cardState[0] || 'hidden'">
+        <img src="../../../../assets/blog/extra-content/choco balls.jpg"
+             alt="Chocolate Energy Balls" />
+        <h3>Chocolate Almond Energy Balls</h3>
+        <p>
+          Made with dates, cocoa powder, and crushed almonds, these bite-sized snacks are rich, fudgy, and
+          perfect for post-workout fuel or mid-afternoon energy boosts. Keep them chilled for a satisfying, guilt-free
+          treat.
+        </p>
+      </div>
+
+      <div class="suggestion-card"
+           inView
+           (inView)="cardState[1] = 'visible'"
+           [@cardAnimation]="cardState[1] || 'hidden'">
+        <img src="../../../../assets/blog/extra-content/yogurt.jpg"
+             alt="Fruit Yogurt Parfait" />
+        <h3>Layered Yogurt Parfait</h3>
+        <p>
+          Combine Greek yogurt with granola, honey, and fresh berries for a creamy no-cook breakfast.
+          These colorful parfaits are loaded with probiotics, fiber, and flavor — ready in minutes.
+        </p>
+      </div>
+
+      <div class="suggestion-card"
+           inView
+           (inView)="cardState[2] = 'visible'"
+           [@cardAnimation]="cardState[2] || 'hidden'">
+        <img src="../../../../assets/blog/extra-content/peanut bars.jpg"
+             alt="Peanut Butter Bars" />
+        <h3>Peanut Butter Oat Bars</h3>
+        <p>
+          Crunchy, chewy, and naturally sweetened with honey — these bars make the perfect grab-and-go
+          snack or healthy dessert alternative. Store them in the fridge for up to a week.
+        </p>
+      </div>
+
+      <div class="suggestion-card"
+           inView
+           (inView)="cardState[3] = 'visible'"
+           [@cardAnimation]="cardState[3] || 'hidden'">
+        <img src="../../../../assets/blog/extra-content/coconut.jpg"
+             alt="Coconut Date Bliss Bites">
+        <h3>Coconut Date Bliss Bites</h3>
+        <p>
+          Packed with natural sweetness from dates and coconut flakes, these no-bake bliss bites are an instant
+          favorite.
+          Add a dash of cocoa or cinnamon for extra depth of flavor.
+        </p>
+      </div>
+
+      <div class="suggestion-card"
+           inView
+           (inView)="cardState[4] = 'visible'"
+           [@cardAnimation]="cardState[4] || 'hidden'">
+        <img src="../../../../assets/blog/extra-content/strawberry.jpg"
+             alt="No-Bake Strawberry Cheesecake Cups">
+        <h3>No-Bake Strawberry Cheesecake Cups</h3>
+        <p>
+          Silky cream cheese layers topped with fresh strawberry purée — these cheesecake cups deliver classic flavor
+          with no oven needed. Perfect for parties or cozy nights in.
+        </p>
+      </div>
+
+      <div class="suggestion-card"
+           inView
+           (inView)="cardState[5] = 'visible'"
+           [@cardAnimation]="cardState[5] || 'hidden'">
+        <img src="../../../../assets/blog/extra-content/mango.jpg"
+             alt="Mango Chia Pudding">
+        <h3>Mango Chia Pudding</h3>
+        <p>
+          Tropical, creamy, and refreshing — chia seeds soak up coconut milk and mango purée
+          to create a nutrient-dense breakfast or dessert you’ll love to spoon into.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>

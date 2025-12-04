@@ -1,0 +1,518 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+/* ====== Overall layout ====== */
+:host {
+  display: block;
+  width: 100%;
+  margin: 15px 10px;
+  padding: 15px;
+  box-shadow: 0 0 20px black;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease;
+  background-color: rgb(208, 246, 255);
+}
+
+:host:hover {
+  box-shadow: 0 0 25px #16751e;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* ====== Form general styling ====== */
+form {
+  background: #fff;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+label {
+  font-weight: 700;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  display: block;
+  color: #444;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #4caf50;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.15);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ====== Buttons ====== */
+button {
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+button.btn-success {
+  background: linear-gradient(to right, #43a047, #66bb6a);
+  color: white;
+  border: none;
+}
+
+button.btn-success:hover {
+  background: linear-gradient(to right, #388e3c, #5ca65c);
+  transform: scale(1.05);
+}
+
+button.btn-danger {
+  background: linear-gradient(to right, #e53935, #ef5350);
+  color: white;
+  border: none;
+}
+
+button.btn-danger:hover {
+  background: linear-gradient(to right, #c62828, #e57373);
+  transform: scale(1.05);
+}
+
+/* ====== Image preview ====== */
+img.img-responsive {
+  display: block;
+  margin: 15px auto;
+  border-radius: 12px;
+  width: 100%;
+  height: 280px; 
+  object-fit: contain;
+  border: 2px solid #eee;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ====== Section titles ====== */
+h6 {
+  margin-top: 25px;
+  color: #2c3e50;
+  font-weight: 700;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+.row {
+  margin-bottom: 15px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+/* ====== Input rows ====== */
+.row[formarrayname="cookingMethod"] .row,
+.row[formarrayname="ingredients"] .row {
+  display: flex;
+  align-items: stretch; 
+  gap: 10px;
+}
+
+.row[formarrayname="cookingMethod"] input,
+.row[formarrayname="ingredients"] input {
+  flex: 1;
+  height: 45px; 
+}
+
+.row[formarrayname="cookingMethod"] button,
+.row[formarrayname="ingredients"] button {
+  align-self: stretch; 
+  height: 45px;
+  padding: 0 16px;
+}
+
+/* ==== Custom Dropdown Styles ==== */
+.custom-select {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.custom-select:hover {
+  border-color: #4caf50;
+  background-color: #f9fff9;
+}
+
+.arrow {
+  float: right;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Dropdown menu list */
+.dropdown-menu {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 5px;
+  padding: 0;
+  list-style: none;
+  font-size: 1.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.dropdown-menu li {
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.2s ease;
+}
+
+.dropdown-menu li:hover {
+  background: rgb(255, 224, 213);
+  color: #ff7f50;
+  transform: scale(1.02);
+}
+
+.dropdown-menu li.selected {
+  background-color: #a5d6a7;
+  color: #0d3d14;
+  font-weight: 600;
+}
+
+/* ALERT MESSAFE SECTION  */
+.alert-message {
+  position: fixed;
+  top: 60px;
+  left: 15px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: all 0.5s ease;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.alert-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alert-add {
+  background-color: #16a34a;
+  border-left: 5px solid #0f6e33;
+}
+
+.alert-update {
+  background-color: #f59e0b;
+  border-left: 5px solid #c77c00;
+}
+
+.alert-cancel {
+  background-color: #dc2626;
+  border-left: 5px solid #991b1b;
+}
+
+.center-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.center-dialog {
+  background: #fffaf5;
+  border: 2px solid #ffa559;
+  border-radius: 12px;
+  padding: 20px 25px;
+  width: 600px;
+  max-width: 90%;
+  text-align: center;
+  font-size: 2.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.center-dialog p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.close-btn {
+  background-color: #8f4000;
+  color: white;
+  border: none;
+  width: 110px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.close-btn:hover {
+  background-color: #ff8a33;
+}
+
+.reminder {
+  width: 50%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+/* ====== disabled states ====== */
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (min-width: 1200px) {
+  :host {
+    width: 100%;
+    margin: 20px 20px;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  label {
+    font-size: 1.7rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    font-size: 1.6rem;
+    padding: 12px 14px;
+  }
+
+  button.btn-success,
+  button.btn-danger {
+    font-size: 1.8rem;
+    padding: 12px 20px;
+  }
+
+  .custom-select {
+    font-size: 1.7rem;
+    padding: 12px 14px;
+  }
+
+  .dropdown-menu li {
+    font-size: 1.6rem;
+  }
+}
+
+/* ===== Medium desktops / laptops: 992px - 1199px ===== */
+@media (min-width: 992px) and (max-width: 1199px) {
+  :host {
+    width: 95%;
+    margin: 18px auto;
+    padding: 18px;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+  }
+
+  label {
+    font-size: 1.6rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    font-size: 1.5rem;
+    padding: 11px 13px;
+  }
+
+  button.btn-success,
+  button.btn-danger {
+    font-size: 1.7rem;
+    padding: 11px 18px;
+  }
+
+  .custom-select {
+    font-size: 1.6rem;
+    padding: 11px 13px;
+  }
+
+  .dropdown-menu li {
+    font-size: 1.5rem;
+  }
+}
+
+/* ===== Tablets / small desktops: 768px - 991px ===== */
+@media (min-width: 768px) and (max-width: 991px) {
+  :host {
+    width: 98%;
+    margin: 15px auto;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  label {
+    font-size: 1.5rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    font-size: 1.4rem;
+    padding: 10px 12px;
+  }
+
+  button.btn-success,
+  button.btn-danger {
+    font-size: 1.6rem;
+    padding: 10px 16px;
+  }
+
+  .custom-select {
+    font-size: 1.5rem;
+    padding: 10px 12px;
+  }
+
+  .dropdown-menu li {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  :host {
+    width: 100%;
+    margin: 10px auto;
+    padding: 12px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  label {
+    font-size: 1.3rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    font-size: 1.3rem;
+    padding: 8px 10px;
+  }
+
+  button.btn-success,
+  button.btn-danger {
+    font-size: 1.5rem;
+    padding: 8px 14px;
+  }
+
+  .custom-select {
+    font-size: 1.3rem;
+    padding: 8px 10px;
+  }
+
+  .dropdown-menu li {
+    font-size: 1.3rem;
+  }
+
+  img.img-responsive {
+    height: 200px;
+  }
+}
+
+@media (max-width: 479px) {
+  :host {
+    width: 100%;
+    margin: 8px auto;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  label {
+    font-size: 1.2rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    font-size: 1.2rem;
+    padding: 6px 8px;
+  }
+
+  button.btn-success,
+  button.btn-danger {
+    font-size: 1.4rem;
+    padding: 6px 12px;
+  }
+
+  .custom-select {
+    font-size: 1.2rem;
+    padding: 6px 8px;
+  }
+
+  .dropdown-menu li {
+    font-size: 1.2rem;
+  }
+
+  img.img-responsive {
+    height: 150px;
+  }
+
+  .center-dialog {
+    width: 90%;
+    font-size: 2rem;
+    padding: 15px 18px;
+  }
+}

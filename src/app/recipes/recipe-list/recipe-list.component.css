@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:host {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.button-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  padding-left: 0;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(199, 255, 125, 0.4);
+}
+
+.btn {
+  background: linear-gradient(to right, #ff0303, #ff7300) !important;
+  border: none !important;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px 20px;
+  margin: 20px 20px;
+}
+
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-left: 15px;
+  padding: 10px 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: visible;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .recipe-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .recipe-list {
+    grid-template-columns: 1fr;
+  }
+}

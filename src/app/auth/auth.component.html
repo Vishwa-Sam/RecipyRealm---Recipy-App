@@ -1,0 +1,156 @@
+@if (error()) {
+<app-alert-message [message]="error()"
+                   (close)="closeError()"></app-alert-message>
+}
+<div class="row"
+     @contentFadeInOut>
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+        @if (isLoading) {
+        <div style="text-align: center;">
+            <app-auth-spinner></app-auth-spinner>
+        </div>
+        }
+
+        <form #authform="ngForm"
+              (ngSubmit)="onSubmit(authform)"
+              *ngIf="!isLoading">
+
+            @if (islogginPage) {
+            <div class="form-container">
+                <div class="headers">
+                    <h3>Welcome Back to RecipeRealm!</h3>
+                    <p>Sign in to continue your tasty journey and uncover new delicious inspirations.</p>
+                </div>
+
+                <div class="form-group">
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           ngModel
+                           required
+                           placeholder=" " />
+                    <label for="email">E-Mail</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="password"
+                           id="password"
+                           name="password"
+                           ngModel
+                           required
+                           minlength="6"
+                           placeholder=" " />
+                    <label for="password">Password</label>
+                    <p class="forgot"
+                       style="color: black; margin-top: 10px;"><a href="#"
+                           style="color: black;">Forgot Password?</a></p>
+                </div>
+
+                <div class="action-row">
+                    <button class="btn btn-success"
+                            type="submit"
+                            [disabled]="!authform.valid">{{ islogginPage? 'Login' : 'Sign-up' }}</button>
+                    <button class="btn btn-primary"
+                            type="button"
+                            (click)="onSwicthPage()">Switch to {{ islogginPage ? 'Sign-up' : 'Login'}}</button>
+                </div>
+
+                <p class="log-in"
+                   style="text-align: center; cursor: pointer; font-size: 13px; color: black;">New here? <span>Create an
+                        account</span>
+                    <a (click)="onSwicthPage()"> - Sign Up</a>
+                </p>
+            </div>
+            }
+
+            @if (!islogginPage) {
+            <div class="form-container">
+                <div class="headers">
+                    <h3>Join RecipeRealm Today!</h3>
+                    <p>Sign up to build your personal recipe collection and discover endless inspiration from chefs
+                        everywhere.</p>
+                </div>
+
+                <div class="form-group">
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           ngModel
+                           required
+                           placeholder=" " />
+                    <label for="email">E-Mail</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text"
+                           id="name"
+                           name="name"
+                           ngModel
+                           required
+                           placeholder=" " />
+                    <label for="name">Name</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="password"
+                           id="password"
+                           name="password"
+                           required
+                           minlength="6"
+                           placeholder=" "
+                           [(ngModel)]="password"
+                           (ngModelChange)="checkPasswords($event, confirmPassword())" />
+                    <label for="password">Password</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="password"
+                           id="confirm-password"
+                           name="confirmPassword"
+                           required
+                           minlength="6"
+                           placeholder=" "
+                           [(ngModel)]="confirmPassword"
+                           (ngModelChange)="checkPasswords(password(), $event)" />
+                    <label for="confirm-password">Confirm Password</label>
+                    @if(confirmPassword() && !passwordsMatch) {
+                    <div class="text-danger mt-1"
+                         id="message">
+                        Passwords do not match.
+                    </div>
+                    }
+                    @if(confirmPassword() && passwordsMatch) {
+                    <div class="text-success mt-1"
+                         id="message">
+                        Passwords match ✅
+                    </div>
+                    }
+                </div>
+
+                <div class="checkbox-group">
+                    <label class="remember">
+                        <input type="checkbox" /> Remember me
+                    </label>
+
+                    <label class="terms">
+                        <input type="checkbox" /> By creating an account you agree to our Terms and Privacy.
+                    </label>
+                </div>
+
+                <div class="action-row">
+                    <button class="btn btn-success"
+                            type="submit"
+                            [disabled]="!authform.valid || !passwordsMatch">Sign-up</button>
+                    <button class="btn btn-primary"
+                            type="button"
+                            (click)="onSwicthPage()">Switch to Login</button>
+                </div>
+
+                <p class="log-in"
+                   style="text-align: center; font-size: 13px; color: black;">Already have an account? <a
+                       (click)="onSwicthPage()">Log In</a></p>
+            </div>
+            }
+        </form>
+    </div>
+</div>

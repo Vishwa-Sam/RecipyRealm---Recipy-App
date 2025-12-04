@@ -1,0 +1,344 @@
+<div class="about-page"
+     @contentFadeInOut>
+  <section class="about-hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Welcome to <span>RecipyRealm</span></h1>
+      <p>
+        Where passionate cooks, foodies, and creators come together to share, learn, and inspire.
+        Whether you’re a home chef experimenting with flavors or a food lover exploring global cuisines,
+        RecipyRealm is your space to connect, discover new ideas, and celebrate the joy of cooking together.
+      </p>
+    </div>
+  </section>
+
+  <section class="our-story container">
+    <h2>Our Story</h2>
+    <p>
+      <strong style="color: #ff0303;">RecipyRealm</strong> began as a small idea among friends who loved to cook and
+      share their favorite
+      recipes online.
+      What started as a simple gathering of passionate food lovers has grown into a thriving global community of
+      home cooks, chefs, and creators.
+      We believe that cooking connects people — every dish tells a story, and every shared recipe builds a bridge
+      between cultures.
+      Our mission is to make discovering, creating, and sharing recipes effortless, fun, and inspiring for everyone.
+      Today, RecipyRealm stands as a celebration of creativity, culture, and connection — a place where
+      inspiration meets flavor, and every cook finds their home.
+    </p>
+  </section>
+
+  <section class="info-section container">
+    <!-- MISSION -->
+    <div class="info-block">
+      <div class="info-image"
+           inView
+           (inView)="imgState[0] = 'visible'"
+           [@imageAnimation]="imgState[0] || 'hidden'">
+        <img src="../../../assets/About-us/mission.jpg"
+             alt="Our Mission" />
+      </div>
+      <div class="info-text">
+        <h3>Our Mission</h3>
+        <p>
+          Our mission at RecipyRealm is to inspire creativity in every kitchen — from home cooks to professional chefs.
+          We aim to build a space where people can share their love for food, discover global flavors,
+          and learn from one another. Every click, comment, and recipe shared brings us closer to a world connected
+          through cooking.
+        </p>
+        <ul class="section-list">
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/About-us/icons/chef-hat.svg"
+                   alt="Chef icon" />
+            </div>
+            <div><strong>Empower</strong> home cooks to share their passion</div>
+          </li>
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/About-us/icons/globe.svg"
+                   alt="Globe icon" />
+            </div>
+            <div><strong>Encourage</strong> cross-cultural food exploration</div>
+          </li>
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/About-us/icons/heart-handshake.svg"
+                   alt="Handshake icon" />
+            </div>
+            <div><strong>Build</strong> a global, welcoming food community</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- VISION -->
+    <div class="info-block reverse">
+      <div class="info-image"
+           inView
+           (inView)="imgState[1] = 'visible'"
+           [@imageAnimation]="imgState[1] || 'hidden'">
+        <img src="../../../assets/About-us/vision.jpg"
+             alt="Our Vision" />
+      </div>
+      <div class="info-text">
+        <h3>Our Vision</h3>
+        <p>
+          We envision RecipyRealm as the world’s most trusted and engaging recipe-sharing platform.
+          A place where technology meets tradition — blending authentic flavors with modern tools
+          to make cooking more fun and social. Our vision is to make every kitchen a creative playground.
+        </p>
+        <ul class="section-list">
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/About-us/icons/rainbow.svg"
+                   alt="Rainbow icon" />
+            </div>
+            <div><strong>Promote</strong> global culinary diversity</div>
+          </li>
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/About-us/icons/lightbulb.svg"
+                   alt="Lightbulb icon" />
+            </div>
+            <div><strong>Simplify</strong> cooking through community-driven ideas</div>
+          </li>
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/About-us/icons/heart.svg"
+                   alt="Heart icon" />
+            </div>
+            <div><strong>Foster</strong> genuine human connection through food</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- VALUES -->
+    <div class="info-block">
+      <div class="info-image"
+           inView
+           (inView)="imgState[2] = 'visible'"
+           [@imageAnimation]="imgState[2] || 'hidden'">
+        <img src="../../../assets/About-us/values.jpg"
+             alt="Our Values" />
+      </div>
+      <div class="info-text">
+        <h3>Our Values</h3>
+        <p>
+          Our values guide everything we do — from the recipes we feature to the community we nurture.
+          We believe in kindness, creativity, and collaboration as the secret ingredients of every great meal.
+          These values keep RecipyRealm genuine, inclusive, and inspiring.
+        </p>
+
+        <ul class="section-list">
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/About-us/icons/users.svg"
+                   alt="Users icon" />
+            </div>
+            <div><strong>Community</strong> over competition</div>
+          </li>
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/About-us/icons/earth.svg"
+                   alt="Earth icon" />
+            </div>
+            <div><strong>Respect</strong> for every culture and cuisine</div>
+          </li>
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/About-us/icons/book-open.svg"
+                   alt="Book icon" />
+            </div>
+            <div><strong>Learning</strong> through sharing</div>
+          </li>
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/About-us/icons/sparkles.svg"
+                   alt="Sparkles icon" />
+            </div>
+            <div><strong>Transparency</strong> and <strong>authenticity</strong></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- WHAT’S NEXT -->
+    <div class="info-block reverse">
+      <div class="info-image"
+           inView
+           (inView)="imgState[3] = 'visible'"
+           [@imageAnimation]="imgState[3] || 'hidden'">
+        <img src="../../../assets/About-us/next.jpg"
+             alt="What's Next" />
+      </div>
+      <div class="info-text">
+        <h3>What’s Next for RecipyRealm</h3>
+        <p>
+          We’re just getting started. Our team is working on exciting features — personalized recommendations,
+          AI-powered meal planners, and social cooking challenges — all designed to make your cooking journey even
+          better.
+          The future of RecipyRealm is about growing together, one recipe at a time.
+        </p>
+        <ul class="section-list">
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/About-us/icons/bot.svg"
+                   alt="Robot icon" />
+            </div>
+            <div><strong>Smart</strong> recipe recommendations</div>
+          </li>
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/About-us/icons/trophy.svg"
+                   alt="Trophy icon" />
+            </div>
+            <div><strong>User-driven</strong> recipe contests</div>
+          </li>
+          <li>
+            <div class="icon-bubble">
+              <img src="../../../assets/About-us/icons/utensils-crossed.svg"
+                   alt="Utensils icon" />
+            </div>
+            <div><strong>AI-assisted</strong> cooking tools</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-choose container">
+    <h2>Why Choose RecipyRealm?</h2>
+    <div class="reasons">
+      <div class="reason-card"
+           inView
+           (inView)="cardState[0] = 'visible'"
+           [@cardAnimation]="cardState[0] || 'hidden'">
+        <img src="../../../assets/About-us/community.jpg"
+             alt="Community cooking" />
+        <h4>A Passionate Community</h4>
+        <p>
+          Our users are the heart of RecipyRealm — a vibrant, diverse group of food lovers who share their joy and
+          creativity every day.
+        </p>
+      </div>
+
+      <div class="reason-card"
+           inView
+           (inView)="cardState[1] = 'visible'"
+           [@cardAnimation]="cardState[1] || 'hidden'">
+        <img src="../../../assets/About-us/recipes.jpg"
+             alt="Recipe variety" />
+        <h4>Endless Recipes</h4>
+        <p>
+          Discover thousands of recipes from every corner of the world — from homely comfort food to gourmet creations.
+        </p>
+      </div>
+
+      <div class="reason-card"
+           inView
+           (inView)="cardState[2] = 'visible'"
+           [@cardAnimation]="cardState[2] || 'hidden'">
+        <img src="../../../assets/About-us/sharing-food.jpg"
+             alt="Sharing recipes" />
+        <h4>Easy Sharing</h4>
+        <p>
+          Sharing your kitchen stories has never been easier. Upload, edit, and post your favorite recipes in just a few
+          clicks.
+        </p>
+      </div>
+
+      <div class="reason-card"
+           inView
+           (inView)="cardState[3] = 'visible'"
+           [@cardAnimation]="cardState[3] || 'hidden'">
+        <img src="../../../assets/About-us/international.jpg"
+             alt="Global inspiration" />
+        <h4>Global Inspiration</h4>
+        <p>
+          Learn from chefs and home cooks across the world. Bring global flavors into your own kitchen and expand your
+          culinary horizons.
+        </p>
+      </div>
+
+      <div class="reason-card"
+           inView
+           (inView)="cardState[4] = 'visible'"
+           [@cardAnimation]="cardState[4] || 'hidden'">
+        <img src="../../../assets/About-us/shopping.jpg"
+             alt="Smart shopping list" />
+        <h4>Smart Shopping List</h4>
+        <p>
+          Plan your grocery trips effortlessly! Automatically generate a shopping list from your saved recipes, check
+          off ingredients, and shop with confidence.
+        </p>
+      </div>
+
+      <div class="reason-card"
+           inView
+           (inView)="cardState[5] = 'visible'"
+           [@cardAnimation]="cardState[5] || 'hidden'">
+        <img src="../../../assets/About-us/cooking.jpg"
+             alt="Step-by-step cooking" />
+        <h4>Step-by-Step Cooking Guidance</h4>
+        <p>
+          Never miss a step again. Follow detailed cooking instructions with images and timers that guide you through
+          each stage like a personal kitchen assistant.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM SECTION -->
+  <section class="team container">
+    <h2>Meet Our Team</h2>
+    <div class="team-grid">
+      <div class="team-card"
+           inView
+           (inView)="cardState[6] = 'visible'"
+           [@cardAnimation]="cardState[6] || 'hidden'">
+        <img src="../../../assets/About-us/britto.jpg"
+             alt="Team Member" />
+        <h4>Britto Samuel</h4>
+        <p>Founder & Recipe Curator</p>
+      </div>
+      <div class="team-card"
+           inView
+           (inView)="cardState[7] = 'visible'"
+           [@cardAnimation]="cardState[7] || 'hidden'">
+        <img src="../../../assets/About-us/miya.jpg"
+             alt="Team Member" />
+        <h4>Miya Chen</h4>
+        <p>Head Chef & Community Builder</p>
+      </div>
+      <div class="team-card"
+           inView
+           (inView)="cardState[8] = 'visible'"
+           [@cardAnimation]="cardState[8] || 'hidden'">
+        <img src="../../../assets/About-us/kapoor.jpg"
+             alt="Team Member" />
+        <h4>Mina Kapoor</h4>
+        <p>UI/UX Designer</p>
+      </div>
+      <div class="team-card"
+           inView
+           (inView)="cardState[9] = 'visible'"
+           [@cardAnimation]="cardState[9] || 'hidden'">
+        <img src="../../../assets/About-us/vishwa.jpg"
+             alt="Team Member" />
+        <h4>Vishwa R</h4>
+        <p>Developer & Food Enthusiast</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Join the RecipyRealm Family</h2>
+    <p>Start your cooking journey with us — share your recipes, discover new ones, and meet fellow food lovers!</p>
+    <button class="btn"
+            (click)="onSignup()">Sign Up Now</button>
+  </section>
+</div>

@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+.article-page {
+  color: #333;
+  line-height: 1.7;
+  padding: 0 1rem;
+}
+
+.featured-article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+  border-bottom: 2px solid #f4e8c1;
+}
+
+.featured-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  gap: 5rem;
+}
+
+.featured-image img {
+  width: 20vw;
+  height: 50vh;
+  max-width: 740px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.featured-content {
+  max-width: 600px;
+}
+
+.featured-content h1 {
+  margin: 0.6rem 0 2rem;
+  font-weight: bold;
+  color: #ff7f50 !important;
+  font-size: 4rem; 
+  color: #1f1f1f;
+  line-height: 5rem;
+}
+
+.featured-content p {
+  color: #555;
+  line-height: 3rem;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.post-category {
+  display: inline-block;
+  background-color: #f2e6b8;
+  color: #5e4c00;
+  border-radius: 999px;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ========== EXTRA CONTENT ========== */
+.extra-content {
+  max-width: 1000px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.extra-content h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 5rem auto;
+  text-align: center;
+  color: #f74200;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  line-height: 6rem;
+}
+
+.content-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.content-block p {
+  flex: 1 1 45%;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.content-block img.article-img {
+  width: 500px;
+  height: 380px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ========= RECIPE BOX ========= */
+.recipe-box {
+  background-color: #faddd9;
+  border: 2px solid #ff0000;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.recipe-box h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.recipe-lists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.recipe-lists ul,
+.recipe-lists ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* SHARED STYLE for both ingredients + steps */
+.recipe-lists ul li,
+.recipe-lists ol li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #333;
+  background: #fff;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border-left: 4px solid #ffd67a;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin: 14px auto;
+  max-width: 700px;
+  width: 100%;
+  text-align: left; 
+}
+
+/* INGREDIENTS ICON */
+.recipe-lists ul li::before {
+  content: "🥣";
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/* STEPS ICON */
+.recipe-lists ol li::before {
+  content: "👉";
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/* ========= CLOSURE ========= */
+.closure {
+  text-align: center;
+  font-style: italic;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 500;
+  color: #333;
+  margin-top: -2rem;
+}
+
+.btn-wrap {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  border: none;
+  outline: 1px solid black;
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  background-color: white;
+  color: black;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= RESPONSIVE STYLES ================= */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .featured-inner {
+    flex-direction: row;
+    gap: 3.5rem;
+  }
+
+  .content-block {
+    flex-direction: row;
+    gap: 2.5rem;
+    text-align: left;
+  }
+
+  .featured-image img,
+  .article-img {
+    width: 55vw;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .featured-content h1,
+  .extra-content h2 {
+    font-size: 3rem;
+    line-height: 4.2rem;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .featured-inner,
+  .content-block {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .featured-image img,
+  .article-img {
+    width: 80vw;
+    max-width: 560px;
+    height: auto;
+  }
+
+  .featured-content h1,
+  .extra-content h2 {
+    font-size: 2.6rem;
+    line-height: 3.6rem;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 480px) {
+  .featured-inner,
+  .content-block {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .featured-image img,
+  .article-img {
+    width: 70vw;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .featured-content h1,
+  .extra-content h2 {
+    font-size: 2.3rem;
+    line-height: 3.2rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .featured-inner,
+  .content-block {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .featured-image img,
+  .article-img {
+    width: 75vw;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .featured-content h1,
+  .extra-content h2 {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+
+  p,
+  .closure {
+    font-size: 1.45rem;
+    line-height: 2.4rem;
+  }
+
+  .btn {
+    font-size: 1.3rem;
+    padding: 10px 22px;
+  }
+}

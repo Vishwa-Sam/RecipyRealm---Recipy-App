@@ -1,0 +1,495 @@
+<main class="blog-page"
+      @contentFadeInOut>
+  <section class="blog-intro">
+    <div class="container">
+      <h1>Blog</h1>
+      <p class="intro-text">
+        News, ideas & inspiration from RecipyRealm — your go-to hub for food lovers everywhere.
+        Dive into kitchen stories, chef interviews, and creative home recipes shared by our vibrant community.
+        Whether you’re experimenting with flavors or perfecting family favorites, there’s always something new cooking
+        here.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ========== FEATURED ARTICLE 1 ========== -->
+  <section class="featured-article">
+    <div class="container featured-inner">
+      <div class="featured-image">
+        <img src="../../../assets/blog/cookies.jpg"
+             alt="No Bake Lemon Oatmeal Cookies"
+             inView
+             (inView)="imgState[0] = 'visible'"
+             [@imageAnimation]="imgState[0] || 'hidden'" />
+      </div>
+
+      <div class="featured-content">
+        <span class="post-category">Recipes</span>
+        <h2>No Bake Lemon Oatmeal Cookies</h2>
+        <p>
+          These bright, chewy cookies come together in minutes — no oven required.
+          Perfect for summer treats or quick snacks that taste like sunshine.
+        </p>
+
+        <button class="btn primary"
+                (click)="goToArticle('lemon-cookies')">
+          Read More
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED ARTICLE 2 ========== -->
+  <section class="featured-article alt">
+    <div class="container featured-inner">
+      <div class="featured-content">
+        <span class="post-category">Snacks</span>
+        <h2>Top 5 Snacks around the world You Need to Try</h2>
+        <p> From crispy Japanese rice crackers to rich Mediterranean hummus bites
+          delights!
+        </p>
+
+        <button class="btn primary"
+                (click)="goToArticle('world-snacks')">
+          Read More
+        </button>
+
+      </div>
+      <div class="featured-image">
+        <img src="../../../assets/blog/japanese snacks.jpg"
+             alt="Top 5 Japanese Snacks"
+             inView
+             (inView)="imgState[1] = 'visible'"
+             [@imageAnimation]="imgState[1] || 'hidden'" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BLOG CARDS GRID 1 ========== -->
+  <section class="blog-list">
+    <div class="container">
+      <div class="posts-grid">
+        <article class="post-card"
+                 inView
+                 (inView)="cardState[0] = 'visible'"
+                 [@cardAnimation]="cardState[0] || 'hidden'">
+          <a href="https://www.theguardian.com/lifeandstyle/2025/apr/27/happy-meals-is-eating-together-the-secret-to-happiness"
+             target="_blank
+          ">
+            <img src="../../../assets/blog/together.jpg"
+                 alt="Article image" />
+            <div class="post-content">
+              <span class="post-category">Community</span>
+              <h2><a
+                   href="https://www.theguardian.com/lifeandstyle/2025/apr/27/happy-meals-is-eating-together-the-secret-to-happiness"
+                   target="_blank">Cooking with Friends: Why Group Meals Matter</a></h2>
+              <p class="post-excerpt">
+                Sharing a meal brings people closer. Here’s how to host your next cooking get-together with ease.
+              </p>
+              <span class="post-date">October 2025</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="post-card"
+                 inView
+                 (inView)="cardState[1] = 'visible'"
+                 [@cardAnimation]="cardState[1] || 'hidden'">
+          <a href="https://www.healthline.com/nutrition/how-to-meal-prep"
+             target="_blank">
+            <img src="../../../assets/blog/plan.jpg"
+                 alt="Article image" />
+            <div class="post-content">
+              <span class="post-category">Tips</span>
+              <h2><a href="https://www.healthline.com/nutrition/how-to-meal-prep"
+                   target="_blank">How to Plan Your Weekly Meal Prep Like a Pro</a></h2>
+              <p class="post-excerpt">
+                A few small changes to your grocery list can transform your cooking routine.
+              </p>
+              <span class="post-date">October 2025</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="post-card"
+                 inView
+                 (inView)="cardState[2] = 'visible'"
+                 [@cardAnimation]="cardState[2] || 'hidden'">
+          <a href="https://www.eatingwell.com/10-minute-breakfast-recipes-11837954"
+             target="_blank">
+            <img src="../../../assets/blog/healthy.jpg"
+                 alt="Article image" />
+            <div class="post-content">
+              <span class="post-category">Recipes</span>
+              <h2><a href="https://www.eatingwell.com/10-minute-breakfast-recipes-11837954"
+                   target="_blank">10-Minute Breakfasts You’ll Actually Want to Make</a></h2>
+              <p class="post-excerpt">
+                Simple, delicious, and fast — here are our favorite quick breakfast ideas.
+              </p>
+              <span class="post-date">September 2025</span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog-list">
+    <div class="container">
+      <div class="posts-grid">
+        <article class="post-card"
+                 inView
+                 (inView)="cardState[3] = 'visible'"
+                 [@cardAnimation]="cardState[3] || 'hidden'">
+          <a href="https://www.seejph.com/index.php/seejph/article/view/4953"
+             target="_blank">
+            <img src="../../../assets/blog/proper-eating.jpg"
+                 alt="Article image" />
+            <div class="post-content">
+              <span class="post-category">Health</span>
+              <h2><a href="https://www.seejph.com/index.php/seejph/article/view/4953"
+                   target="_blank">How to Eat Mindfully in 2025</a></h2>
+              <p class="post-excerpt">Small steps, big impact — mindful eating is about reconnecting with your food.</p>
+              <span class="post-date">September 2025</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="post-card"
+                 inView
+                 (inView)="cardState[4] = 'visible'"
+                 [@cardAnimation]="cardState[4] || 'hidden'">
+          <a href="https://www.ift.org/news-and-publications/food-technology-magazine/issues/2024/october/features/how-ai-is-revolutionizing-product-development"
+             target="_blank">
+            <img src="../../../assets/blog/ai.jpg"
+                 alt="Article image" />
+            <div class="post-content">
+              <span class="post-category">Trends</span>
+              <h2><a
+                   href="https://www.ift.org/news-and-publications/food-technology-magazine/issues/2024/october/features/how-ai-is-revolutionizing-product-development"
+                   target="_blank">The Rise of AI-Powered Recipes</a></h2>
+              <p class="post-excerpt">
+                From recommendations to personalized cooking — AI is transforming kitchens.
+              </p>
+              <span class="post-date">August 2025</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="post-card"
+                 inView
+                 (inView)="cardState[5] = 'visible'"
+                 [@cardAnimation]="cardState[5] || 'hidden'">
+          <a href="#">
+            <img src="../../../assets/blog/chef.jpg"
+                 alt="Article image" />
+            <div class="post-content">
+              <span class="post-category">News</span>
+              <h2>RecipyRealm Joins Hands with Top Creators</h2>
+              <p class="post-excerpt">
+                Building a vibrant food community through partnerships with the best culinary minds.
+              </p>
+              <span class="post-date">August 2025</span>
+            </div>
+          </a>
+        </article>
+      </div>
+
+      @if (!showSection1) {
+      <div class="load-more">
+        <button class="btn"
+                (click)="toLoadMore()">Load More</button>
+      </div>
+      }
+    </div>
+  </section>
+
+  @if (showSection1) {
+  <div @contentFadeInOut
+       class="extra-content">
+    <section class="featured-article alt">
+      <div class="container featured-inner">
+        <div class="featured-image">
+          <img src="../../../assets/blog/extra-content/food-psychology.jpg"
+               alt="Why Comfort Food Hits Different"
+               inView
+               (inView)="imgState[2] = 'visible'"
+               [@imageAnimation]="imgState[2] || 'hidden'" />
+        </div>
+
+        <div class="featured-content">
+          <span class="post-category">Food Psychology</span>
+          <h2>Why Comfort Food Hits Different: The Psychology Behind It</h2>
+          <p> Why do certain foods instantly soothe us, reduce stress, or bring back warm memories?
+            Comfort food plays a powerful emotional role — from boosting mood to triggering nostalgia.
+            Explore the science behind why we crave it and how it influences our well-being.
+          </p>
+
+          <button class="btn primary"
+                  (click)="goToArticle('comfort-foods')">
+            Read More
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-list">
+      <div class="container">
+        <div class="posts-grid">
+
+          <article class="post-card"
+                   inView
+                   (inView)="cardState[6] = 'visible'"
+                   [@cardAnimation]="cardState[6] || 'hidden'">
+            <a href="https://foodtechpathshala.com/the-history-of-street-food-around-the-world/"
+               target="_blank">
+              <img src="../../../assets/blog/extra-content/street-food.jpg"
+                   alt="Street Food History" />
+              <div class="post-content">
+                <span class="post-category">History</span>
+                <h2>The Fascinating History of Street Food Around the World</h2>
+                <p class="post-excerpt">
+                  From ancient civilizations to modern cities, street food has evolved into a cultural symbol
+                  loved across the globe.
+                </p>
+                <span class="post-date">October 2025</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="post-card"
+                   inView
+                   (inView)="cardState[7] = 'visible'"
+                   [@cardAnimation]="cardState[7] || 'hidden'">
+            <a href="https://www.health.harvard.edu/blog/nutritional-psychiatry-your-brain-on-food-201511168626"
+               target="_blank">
+              <img src="../../../assets/blog/extra-content/happy-food.jpg"
+                   alt="How Food Influences Mood" />
+
+              <div class="post-content">
+                <span class="post-category">Wellness</span>
+                <h2>How Food Influences Mood</h2>
+                <p class="post-excerpt">
+                  What you eat doesn’t just fuel your body — it affects your brain, emotions, and energy levels.
+                  Learn how your diet shapes your mood.
+                </p>
+                <span class="post-date">October 2025</span>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div class="load-more">
+          @if (!showSection2) {
+          <button class="btn"
+                  (click)="toLoadMore()">Load More</button>
+          }
+
+          <button class="btn primary"
+                  (click)="toLoadLessSection1()"
+                  style="margin-left: 10px;">Load Less</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  }
+
+  @if (showSection2) {
+  <div @contentFadeInOut>
+    <section class="blog-list">
+      <div class="container">
+        <div class="posts-grid">
+
+          <article class="post-card"
+                   inView
+                   (inView)="cardState[8] = 'visible'"
+                   [@cardAnimation]="cardState[8] || 'hidden'">
+            <a href="https://www.chefyerika.com/en/post/the-art-of-slow-cooking-benefits-and-traditional-recipes"
+               target="_blank">
+              <img src="../../../assets/blog/extra-content/slow-cooking.jpg"
+                   alt="Slow Cooking" />
+              <div class="post-content">
+                <span class="post-category">Cooking</span>
+                <h2>
+                  <a href="https://www.chefyerika.com/en/post/the-art-of-slow-cooking-benefits-and-traditional-recipes"
+                     target="_blank">The Art of Slow Cooking</a>
+                </h2>
+                <p class="post-excerpt">
+                  Slow cooking transforms ingredients through time, patience, and gentle heat — a method found in
+                  traditions around the world.
+                </p>
+                <span class="post-date">October 2025</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="post-card"
+                   inView
+                   (inView)="cardState[9] = 'visible'"
+                   [@cardAnimation]="cardState[9] || 'hidden'">
+            <a href="https://spicestoryteller.com/the-science-of-spices-how-they-enhance-flavor-and-aroma/"
+               target="_blank">
+              <img src="../../../assets/blog/extra-content/spices.jpg"
+                   alt="Spices Science" />
+              <div class="post-content">
+                <span class="post-category">Food Science</span>
+                <h2>
+                  <a href="https://spicestoryteller.com/the-science-of-spices-how-they-enhance-flavor-and-aroma/"
+                     target="_blank">The Science Behind Spices</a>
+                </h2>
+                <p class="post-excerpt">
+                  From aroma molecules to flavor chemistry — explore why spices have shaped cuisine, medicine, and trade
+                  for centuries.
+                </p>
+                <span class="post-date">October 2025</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="post-card"
+                   inView
+                   (inView)="cardState[10] = 'visible'"
+                   [@cardAnimation]="cardState[10] || 'hidden'">
+            <a href="https://www.uncommonfood.com/why-fermented-foods-are-making-a-comeback/"
+               target="_blank">
+              <img src="../../../assets/blog/extra-content/fermented-food.jpg"
+                   alt="Fermented Foods" />
+              <div class="post-content">
+                <span class="post-category">Trends</span>
+                <h2>
+                  <a href="https://www.uncommonfood.com/why-fermented-foods-are-making-a-comeback/"
+                     target="_blank">Why Fermented Foods Are Making a Comeback</a>
+                </h2>
+                <p class="post-excerpt">
+                  Fermentation is one of the oldest culinary arts — and today, it’s more popular than ever thanks to its
+                  flavor and health benefits.
+                </p>
+                <span class="post-date">October 2025</span>
+              </div>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-list">
+      <div class="container">
+        <div class="posts-grid">
+
+          <article class="post-card"
+                   inView
+                   (inView)="cardState[11] = 'visible'"
+                   [@cardAnimation]="cardState[11] || 'hidden'">
+            <a href="https://historyguild.org/the-worlds-sweet-tooth-a-brief-history-of-chocolate/"
+               target="_blank">
+              <img src="../../../assets/blog/extra-content/choco.jpg"
+                   alt="Chocolate History" />
+              <div class="post-content">
+                <span class="post-category">History</span>
+                <h2>
+                  <a href="https://historyguild.org/the-worlds-sweet-tooth-a-brief-history-of-chocolate/"
+                     target="_blank">The Unexpected History of Chocolate: From Ancient Ritual to Modern Treat</a>
+                </h2>
+                <p class="post-excerpt">
+                  Chocolate has evolved from sacred ritual drink to beloved global dessert — a rich journey spanning
+                  thousands of years.
+                </p>
+                <span class="post-date">September 2025</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="post-card"
+                   inView
+                   (inView)="cardState[12] = 'visible'"
+                   [@cardAnimation]="cardState[12] || 'hidden'">
+            <a href="https://www.foodinfotech.com/the-art-of-food-plating-turning-plates-into-masterpiece/"
+               target="_blank">
+              <img src="../../../assets/blog/extra-content/plating.jpg"
+                   alt="Food Plating Art" />
+              <div class="post-content">
+                <span class="post-category">Culinary Arts</span>
+                <h2>
+                  <a href="https://www.foodinfotech.com/the-art-of-food-plating-turning-plates-into-masterpiece/"
+                     target="_blank">The Art of Food Plating: Why Presentation Changes Flavor</a>
+                </h2>
+                <p class="post-excerpt">
+                  A beautifully plated dish does more than impress — it actually changes how your brain perceives taste.
+                </p>
+                <span class="post-date">August 2025</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="post-card"
+                   inView
+                   (inView)="cardState[13] = 'visible'"
+                   [@cardAnimation]="cardState[13] || 'hidden'">
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9294073/"
+               target="_blank">
+              <img src="../../../assets/blog/extra-content/world-food.jpg"
+                   alt="Globalization and Food" />
+              <div class="post-content">
+                <span class="post-category">Culture</span>
+                <h2>
+                  <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9294073/"
+                     target="_blank">How Globalization Changes What We Eat</a>
+                </h2>
+                <p class="post-excerpt">
+                  Global trade, migration, and modern innovation are blending cuisines and reshaping how we experience
+                  food worldwide.
+                </p>
+                <span class="post-date">August 2025</span>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div class="load-more">
+          <button class="btn primary"
+                  (click)="toLoadLessSection2()">Load Less</button>
+        </div>
+
+      </div>
+    </section>
+  </div>
+  }
+
+  <!-- ========== DOWNLOAD APP SECTION ========== -->
+  <section class="blog-cta">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="cta-text">
+          <h2>Download the RecipyRealm App</h2>
+          <p>
+            Discover smarter cooking, personalized recipes, and an active food-loving community. Available on all major
+            platforms.
+          </p>
+          <div class="app-links">
+            <a href="https://www.apple.com/app-store/"><img src="../../../assets/blog/app-store.png"
+                   alt="App Store" /></a>
+            <a href="https://play.google.com/store"><img src="../../../assets/blog/playstore.png"
+                   alt="Google Play" /></a>
+          </div>
+        </div>
+        <div class="cta-image">
+          <img src="../../../assets/blog/app.jpg"
+               alt="recify"
+               inView
+               (inView)="imgState[3] = 'visible'"
+               [@imageAnimation]="imgState[3] || 'hidden'" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER SECTION ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>©2025 RecipyRealm. All rights reserved.</p>
+    </div>
+  </footer>
+</main>

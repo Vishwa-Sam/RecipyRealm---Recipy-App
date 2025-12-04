@@ -1,0 +1,15 @@
+<div class="button-row">
+  <button class="btn btn-success"
+          (click)="toNewRecipe()">New Recipe</button>
+</div>
+
+<hr>
+
+<div class="recipe-list"
+     [@listAnimation]>
+  @for (recipeList of recipes(); track $index) {
+  <app-recipe-item [recipe]="recipeList"
+                   [id]="recipeList.id">
+  </app-recipe-item>
+  }
+</div>

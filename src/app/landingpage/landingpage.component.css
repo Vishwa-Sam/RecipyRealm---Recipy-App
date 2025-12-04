@@ -1,0 +1,970 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fffdfc;
+}
+
+/* =========================================
+    HERO SECTION STYLES
+========================================= */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(65%);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  color: white;
+  max-width: 800px;
+  z-index: 2;
+  padding-left: 55px;
+}
+
+.tag {
+  background: rgb(202, 195, 195);
+  color: #007bb4;
+  padding: 0.5rem 1.3rem;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-top: 1.2rem;
+  line-height: 1.5;
+}
+
+.hero p {
+  margin: 1.5rem 0;
+  font-size: 1.6rem;
+  font-weight: 400;
+  opacity: 0.95;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 2.5rem;
+  margin: 30px 0;
+}
+
+.btn.one,
+.btn.two {
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.25s ease-in-out;
+}
+
+.btn.one {
+  background: linear-gradient(to right, #ff0303, #ff7300);
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.btn.two {
+  background: rgb(114, 106, 106);
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn.one:hover,
+.btn.two:hover {
+  transform: scale(1.05);
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  color: #f1f1f1;
+  font-size: 1.3rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.hero-tags span {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+}
+
+/* =========================================
+    ICON BUBBLE STYLES
+========================================= */
+.icon-bubble {
+  background: #ffb562;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 3px 8px rgba(255, 170, 90, 0.3);
+  transition: all 0.3s ease;
+}
+
+.icon-bubble img,
+.icon-bubble svg {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  filter: brightness(0);
+  transition: transform 0.3s ease;
+}
+
+li:hover .icon-bubble,
+.customize-list li:hover .icon-bubble,
+.why-list li:hover .icon-bubble,
+.built-for li:hover .icon-bubble {
+  background: linear-gradient(to right, #ff8a05, #ffb347);
+  transform: translateY(-3px);
+}
+
+li:hover .icon-bubble img,
+.customize-list li:hover .icon-bubble img,
+.why-list li:hover .icon-bubble img,
+.built-for li:hover .icon-bubble img,
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+/* =========================================
+    WHY CHOOSE SECTION STYLES
+========================================= */
+.why-choose {
+  padding: 100px 0;
+}
+
+.why-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.why-img img {
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================
+    SHARED STYLES SECTION 
+========================================= */
+.why-text,
+.why-img,
+.built-text,
+.built-img {
+  flex: 1;
+}
+
+.why-text h2,
+.create-customize h2,
+.built-text h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ff7f50;
+  margin-bottom: 25px;
+}
+
+.why-list li,
+.customize-list li,
+.built-for li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  padding: 16px 18px;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  border-radius: 12px;
+  background: #fafafa;
+  border: 1px solid #800303;
+  transition: all 0.25s ease;
+}
+
+.why-list li:hover,
+.customize-list li:hover,
+.built-for li:hover {
+  background: #fff;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================
+    CREATE & CUSTOMIZE SECTION STYLES
+========================================= */
+.customize-wrapper {
+  max-width: 1400px;
+  margin: 20vh auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.customize-subtitle {
+  text-align: left;
+  max-width: 680px;
+  line-height: 1.6;
+  color: #444;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.features-img {
+  width: 100%;
+  max-width: 680px;
+  border-radius: 20px;
+  height: 75vh;
+  object-fit: cover;
+  margin-top: 10px;
+  flex-shrink: 0;
+}
+
+.customize-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+  max-width: 720px;
+}
+
+.customize-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.customize-list li div {
+  font-size: 2rem;
+  color: #333;
+  line-height: 1.55;
+}
+
+.goto-link {
+  margin-top: 20px;
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: #ff0303;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.goto-link:hover {
+  transform: scale(1.02);
+  text-decoration: underline;
+}
+
+/* =========================================
+    BUILT FOR EVERYONE SECTION STYLES
+========================================= */
+.built-for {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4rem 5%;
+  gap: 5rem;
+  margin-top: 10vh;
+}
+
+.built-img img {
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.tags span {
+  background: #f17d7d;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  margin-right: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+
+/* =========================================
+    FEATURES SECTION STYLES
+========================================= */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 5rem;
+  padding: 3rem 5rem;
+  justify-items: center;
+}
+
+.feature-card,
+.recipe-card {
+  background: #fff0f0;
+  border-radius: 15px;
+  box-shadow: 0 25px 20px black;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card h4,
+.collection-card h4,
+.recipe-card h4 {
+  font-size: 2.2rem;
+  color: rgb(221, 98, 98);
+  font-weight: bold;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.feature-card p,
+.collection-description,
+.recipe-card p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 500;
+  color: #5e5c5c;
+}
+
+.feature-card img,
+.recipe-card img,
+.collection-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.feature-card:hover,
+.recipe-card:hover,
+.collection-card:hover {
+  box-shadow: 0 10px 25px black;
+  transform: translateY(-8px);
+}
+
+/* =========================================
+    COLLECTIONS SECTION STYLES
+========================================= */
+.collections {
+  padding: 10px 10px;
+  text-align: center;
+  margin-top: -4vh;
+  width: 100%;
+}
+
+.collection-card img {
+  height: 280px !important;
+}
+
+.collection-desc {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #555;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 55px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+}
+
+.collection-card {
+  border-radius: 18px;
+  background: #fff0f0;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 25px 20px black;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* =========================================
+    POPULAR RECIPES SECTION STYLES
+========================================= */
+.popular {
+  padding: 4rem 5%;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.popular h2, .testimonial-heading h2, .collections h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #ff7f50;
+}
+
+.popular p, .testimonial-heading p {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #555;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 5rem;
+  padding: 3rem 5rem;
+  justify-items: center;
+}
+
+/* =========================================
+    TESTIMONIALS SECTION STYLES
+========================================= */
+.testimonials {
+  background: #f7dfdf;
+  padding: 4rem 0;
+  margin: 8vh 0;
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 5rem;
+  margin-top: 1vh;
+  margin-bottom: 5vh;
+  padding: 5px 50px;
+}
+
+.testimonial-heading {
+  text-align: center;
+  max-width: 800px;
+  margin: 10px auto 40px;
+}
+
+.testimonial {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: #ffffff;
+  position: relative;
+  border: 3px solid #000000;
+  box-shadow: 15px 20px 20px black;
+}
+
+.testimonial .stars {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 1.3rem;
+  padding: 3px 8px;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.testimonial-img {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid #f3f3f3;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial h4 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.testimonial p {
+  margin-top: 12px;
+  color: #555;
+  line-height: 1.45;
+  font-size: 1.5rem;
+  max-width: 500px;
+}
+
+.testimonial-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================
+  FOOTER SECTION STYLES
+========================================= */
+.footer {
+  background: #111;
+  color: #eee;
+  padding: 60px 0;
+  margin-top: 80px;
+}
+
+.footer-content {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-section h3 {
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.footer-section h3:hover {
+  color: #ff7f50;
+  cursor: pointer;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  margin-right: 10px;
+  margin-left: 5px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.footer-section p {
+  font-size: 1.3rem;
+  opacity: 0.8;
+  margin-top: 8px;
+}
+
+.footer-section h4 {
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 2px;
+}
+
+.home-links li {
+  margin-bottom: 25px;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.home-links a {
+  transition: all 0.35s ease;
+}
+
+.home-links a:hover,
+.contact li a:hover {
+  color: #ff7f50 !important;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #ddd;
+}
+
+.footer-section a:hover {
+  opacity: 1;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.contact li {
+  margin-bottom: 20px;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.contact .icon-bubble {
+  margin-left: 0;
+}
+
+.social-icons ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.social-icons .icon-bubble,
+.contact .icon-bubble {
+  width: 60px;
+  height: 60px;
+  padding: 8px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+/* ----------------- Max width 1200px ----------------- */
+@media (max-width: 1200px) {
+  .hero-text {
+    padding-left: 35px;
+    max-width: 700px;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+  }
+
+  .why-text h2,
+  .create-customize h2,
+  .collections h2,
+  .built-text h2,
+  .popular h2,
+  .testimonial-heading h2 {
+    font-size: 3.2rem;
+  }
+
+  .feature-card h3,
+  .collection-card h4,
+  .recipe-card h4 {
+    font-size: 2rem;
+  }
+
+  .feature-card p,
+  .collection-description,
+  .recipe-card p {
+    font-size: 1.5rem;
+  }
+
+  .create-customize img {
+    max-width: 500px;
+  }
+
+  .footer-section h3 {
+    font-size: 2rem;
+  }
+}
+
+/* ----------------- Max width 992px ----------------- */
+@media (max-width: 992px) {
+  .hero-text {
+    padding-left: 20px;
+    max-width: 600px;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero p {
+    font-size: 1.4rem;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .create-customize img {
+    max-width: 450px;
+  }
+
+  .collections h2,
+  .built-text h2 {
+    font-size: 2.8rem;
+  }
+
+  .feature-card,
+  .collection-card,
+  .recipe-card {
+    padding: 1rem;
+  }
+
+  .feature-card h3,
+  .collection-card h4,
+  .recipe-card h4 {
+    font-size: 1.8rem;
+  }
+
+  .feature-card p,
+  .collection-description,
+  .recipe-card p {
+    font-size: 1.4rem;
+  }
+
+  .testimonial-heading h2 {
+    font-size: 3rem;
+  }
+
+  .testimonial-heading p {
+    font-size: 1.6rem;
+  }
+}
+
+/* ----------------- Max width 768px ----------------- */
+@media (max-width: 768px) {
+  .hero-text {
+    padding-left: 15px;
+    max-width: 500px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
+
+  .hero-buttons button {
+    font-size: 1.3rem;
+    padding: 10px 18px;
+  }
+
+  .hero-tags {
+    flex-direction: row;
+    gap: 0.8rem;
+  }
+
+  .create-customize img {
+    max-width: 350px;
+  }
+
+  .why-text h2,
+  .create-customize h2,
+  .collections h2,
+  .built-text h2,
+  .popular h2 {
+    font-size: 2.4rem;
+  }
+
+  .why-list li,
+  .customize-list li,
+  .built-for li {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding: 12px 14px;
+  }
+
+  .feature-card,
+  .collection-card,
+  .recipe-card {
+    padding: 1rem;
+    gap: 3rem;
+  }
+
+  .feature-card h3,
+  .collection-card h4,
+  .recipe-card h4 {
+    font-size: 1.6rem;
+  }
+
+  .feature-card p,
+  .collection-description,
+  .recipe-card p {
+    font-size: 1.3rem;
+  }
+
+  .collections .collection-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+  }
+
+  .testimonials .testimonial-cards {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    padding: 0 20px;
+  }
+
+  .footer-section p,
+  .home-links li,
+  .contact li a {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+/* ----------------- Max width 480px ----------------- */
+@media (max-width: 480px) {
+  .hero-text {
+    padding-left: 10px;
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 20px;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+  }
+
+  .hero-tags {
+    font-size: 1.2rem;
+  }
+
+  .why-content {
+    flex-direction: column;
+  }
+
+  .why-text img,
+  .features-img,
+  .built-img img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .create-customize img {
+    max-width: 100%;
+  }
+
+  .why-text h2,
+  .create-customize h2,
+  .collections h2,
+  .built-text h2,
+  .popular h2 {
+    font-size: 2rem;
+  }
+
+  .why-list li,
+  .customize-list li,
+  .built-for li {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    padding: 10px 12px;
+  }
+
+  .feature-card,
+  .collection-card,
+  .recipe-card {
+    padding: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .feature-card h3,
+  .collection-card h4,
+  .recipe-card h4 {
+    font-size: 1.4rem;
+  }
+
+  .feature-card p,
+  .collection-description,
+  .recipe-card p {
+    font-size: 1.2rem;
+  }
+
+  .collections .collection-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .customize-wrapper {
+    flex-direction: column;
+    margin: 10vh auto;
+    padding: 0 10px;
+  }
+
+  .built-text,
+  .built-img {
+    flex: 1 1 100%;
+  }
+
+  .testimonials .testimonial-cards {
+    padding: 0 10px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
