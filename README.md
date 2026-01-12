@@ -3,9 +3,13 @@
   RecipyRealm – Recipe Management Application
 </h1>
 
-Recipy is a dynamic and fully featured recipe management web application built using modern Angular architecture, Firebase integration, and clean UI principles powered by Bootstrap. The application allows users to easily explore recipes, manage ingredients, create personalized collections, and maintain a real-time synchronized shopping list.
+RecipyRealm is a dynamic, full-featured recipe management web application built using Angular, TypeScript, Bootstrap, and Firebase. It is a complete frontend application designed with real-world scalability and maintainability in mind.
 
-Designed as a scalable and production-ready Angular project, Recipy showcases modular structure, reusable components, route-based navigation, service-based APIs, and integration with Firebase Authentication and Realtime Database.
+The platform enables users to explore curated recipes, manage ingredients, create personalized recipe collections, and maintain a real-time synchronized shopping list. Firebase Authentication ensures secure user access, while Firebase Realtime Database provides instant data synchronization across sessions and devices.
+
+RecipyRealm follows modern Angular architecture principles, including modular structure, reusable components, route-based navigation, and service-driven data handling. The UI is built with Bootstrap to deliver a clean, responsive, and user-friendly experience across screen sizes.
+
+This project highlights strong frontend engineering practices, effective cloud integration, and a focus on usability and performance. RecipyRealm demonstrates the ability to design and implement a production-style Angular application that combines clean UI design with robust data management and real-time interaction.
 
 ---
 
