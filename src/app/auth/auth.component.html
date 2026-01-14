@@ -98,8 +98,9 @@
                            required
                            minlength="6"
                            placeholder=" "
-                           [(ngModel)]="password"
-                           (ngModelChange)="checkPasswords($event, confirmPassword())" />
+                           [ngModel]="password()"
+                           (ngModelChange)="password.set($event);
+                           checkPasswords($event, confirmPassword())" />
                     <label for="password">Password</label>
                 </div>
 
@@ -110,8 +111,9 @@
                            required
                            minlength="6"
                            placeholder=" "
-                           [(ngModel)]="confirmPassword"
-                           (ngModelChange)="checkPasswords(password(), $event)" />
+                           [ngModel]="confirmPassword()"
+                           (ngModelChange)="confirmPassword.set($event);
+                           checkPasswords(password(), $event)" />
                     <label for="confirm-password">Confirm Password</label>
                     @if(confirmPassword() && !passwordsMatch) {
                     <div class="text-danger mt-1"

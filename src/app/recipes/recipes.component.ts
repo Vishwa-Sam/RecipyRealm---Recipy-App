@@ -59,7 +59,7 @@ export class RecipesComponent {
     if (cuisine) {
       result = result.filter((r) => r.cuisine === cuisine);
     }
-
+    
     if (search.trim()) {
       result = result.filter((item) =>
         item.name.toLowerCase().includes(search)
